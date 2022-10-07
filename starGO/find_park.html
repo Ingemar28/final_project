@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Star Go</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+        <link rel="stylesheet"
+            href="style.css">
+    </head>
+    <!-- Start of Content -->
+    <body class="page-home">
+        <nav id="main-menu">
+            
+            <figure id="logo">
+                <h1>Star Go</h1>
+            </figure>
+            
+            <ul>
+
+				<li class="current">
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="">Find Park</a>
+				</li>
+				<li>
+					<a href="">Mission Board</a>
+				</li>
+                <li>
+					<a href="">Community</a>
+				</li>
+                <li>
+					<a href="">Log in</a>
+				</li>
+			</ul>
+
+		</nav>
+        <header id="page-header">
+
+			<section class="banner-title">
+				
+				<h1>Check out the moon phase</h1>
+
+                <form id="date">
+                    <label for="date">Dates: </label>
+                    <input type="date" id="date" name="date">
+                    <input type="button" onclick="lookUpMoon()" value="Submit">
+                </form>
+	
+			</section>
+            <div>
+                <img id="pic" alt="moon">
+                <img id="pic_2" alt="star">
+            </div>
+
+		</header>
+        
+        <aside>
+            
+        </aside>
+        <section id="features">
+            <h2>Explore Parks</h2>
+            <article class="brief">
+                <section id="pictures">
+                    <div>
+                        <img src="images/star1.jpeg" alt="star1">
+                        <p>Victoria Park</p>
+                    </div>
+                    <div>
+                        <img src="images/star2.jpeg" alt="star2">
+                        <p>Perrin Park</p>
+                    </div>
+                    <div>
+                        <img src="images/star3.jpeg" alt="star3">
+                        <p>City Botanic Gardens</p>
+                    </div>
+
+                </section>
+                <nav class="cta-button">
+                    <a href="destination.html">Explore more</a>
+                </nav>
+            </article>
+        </section>
+        <footer id="page-footer">
+			<nav id="secondary-menu">
+				<ul>
+					<li>
+						<a href="contact.html">Contact Us</a>
+					</li>
+					<li>
+						<a href="">Privacy Policy</a>
+					</li>
+					<li>
+						<a href="">Copyright</a>
+					</li>
+				</ul>
+			</nav>
+
+		</footer>
+        <script>
+            applicationId = "eb8afe10-12a0-4096-892a-0bd917699c62";
+            applicationSecret = "f0d8ddb5e9ccbd5ecdb2e3e81048990b39063f57e204b45df5040c0ff1fa99629051f0210d23b5a50bd857518bc9a584c4fa85e6d8963c2035f428efbf23941d342829723fc46f704ff4a323456ab5ef47e4f28c0dbb07f6f86893fd51295b2ac5b5946cea5ee6f5434b19d1bb0225c3";
+            const hash = btoa(`${applicationId}:${applicationSecret}`);
+            const options = {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json',
+                        'Content-Length': '26',
+                        'Connection': 'keep-alive',
+                        'x-amzn-RequestId':'86ffcef9-d495-4370-b1af-37f17919f6e9',
+                        'x-amzn-ErrorType':'UnauthorizedException',
+                        'x-amz-apigw-id':'ZYS5qGp6IAMF4Lw='
+                    },
+                    body: '{"style": "inverted","observer": {"latitude": 33.775867,"longitude": -84.39733,"date": "2019-12-20"},"view": {"type": "constellation","parameters": {"constellation": "ori"}}}'
+                };
+                fetch('https://api.astronomyapi.com/api/v2/studio/star-chart', options)
+                .then(response => response.json())
+                .then(response => {console.log(response), showMoon(response)})
+                function showMoon(response){
+                    const img = document.getElementById("pic")
+                    img.src = response.data.imageUrl
+                }
+            
+
+
+
+
+
+            // var x = "2020-09-23"
+            // callMoon(x)
+            // callStar(x)
+
+            // function callMoon(x){
+
+            //     const options = {
+            //         method: 'POST',
+            //         headers: {
+            //             'content-type': 'application/json',
+            //             'X-RapidAPI-Key': 'ff4086d773msh829a5e3e92ff899p1b3b5ajsnedab1db48561',
+            //             'X-RapidAPI-Host': 'astronomy.p.rapidapi.com'
+            //         },
+            //         body: '{"format":"png","observer":{"date":"'+ x + '","latitude":-27.470125,"longitude":153.021072},"style":{"backgroundColor":"white","backgroundStyle":"stars","headingColor":"white","moonStyle":"default","textColor":"white"},"view":{"type":"portrait-simple"}}'
+            //     };
+                
+            //     fetch('https://astronomy.p.rapidapi.com/api/v2/studio/moon-phase', options)
+            //     .then(response => response.json())
+            //     .then(response => {console.log(response), showMoon(response)})
+            //     .catch(err => console.error(err));
+            //     function showMoon(response){
+            //         const img = document.getElementById("pic")
+            //         img.src = response.data.imageUrl
+            //     }
+            // }
+            
+            // function callStar(x){
+
+            //     const options_2 = {
+            //         method: 'POST',
+            //         headers: {
+            //             'content-type': 'application/json',
+            //             'X-RapidAPI-Key': 'ff4086d773msh829a5e3e92ff899p1b3b5ajsnedab1db48561',
+            //             'X-RapidAPI-Host': 'astronomy.p.rapidapi.com'
+            //         },
+            //         body: '{"observer":{"date":"'+ x + '","latitude":-27.470125,"longitude":153.021072},"style":"default","view":{"parameters":{"constellation":"ori"},"type":"constellation"}}'
+            //     };
+        
+            //     fetch('https://astronomy.p.rapidapi.com/api/v2/studio/star-chart', options_2)
+            //     .then(response => response.json())
+            //     .then(response => {console.log(response), showStar(response)})
+            //     .catch(err => console.error(err));
+
+            //     function showStar(response){
+            //         const img = document.getElementById("pic_2")
+            //         img.src = response.data.imageUrl
+            //     }
+            // }
+
+            // function lookUpMoon() {
+            //     x = document.getElementById("date").value;
+            //     console.log(x)
+
+            //     const xhttp = new XMLHttpRequest();
+            //     xhttp.onload = function() {
+            //         callMoon(x);
+            //         }
+            //     xhttp.open("GET", "https://astronomy.p.rapidapi.com/api/v2/studio/star-chart", true);
+            //     xhttp.send();
+
+            //     const xhttp_2 = new XMLHttpRequest();
+            //     xhttp_2.onload = function() {
+            //         callStar(x);
+            //         }
+            //     xhttp_2.open("GET", "https://astronomy.p.rapidapi.com/api/v2/studio/star-chart", true);
+            //     xhttp_2.send();
+            // }
+            
+            
+
+            </script>
+    </body>
+</html>

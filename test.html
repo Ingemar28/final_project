@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Home</title>
+	</head>
+	<body>
+
+		<header>
+      <p id="p1">Hello</p>
+      <p id="tag">MOON!</p>
+      <img id="pic">
+      <img id="pic_2">
+
+		</header>
+
+    <article></article>		
+		<aside></aside>
+
+		<footer></footer>
+    <!-- <script type="module" src="index.js"></script>
+    <script type="module" src="another-file.js"></script> -->
+    <!-- <script src="bundle.js"></script> -->
+
+    <script>
+      
+      const options = {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+          'X-RapidAPI-Key': 'ff4086d773msh829a5e3e92ff899p1b3b5ajsnedab1db48561',
+          'X-RapidAPI-Host': 'astronomy.p.rapidapi.com'
+        },
+        body: '{"format":"png","observer":{"date":"2022-09-10","latitude":-27.470125,"longitude":153.021072},"style":{"backgroundColor":"red","backgroundStyle":"stars","headingColor":"white","moonStyle":"default","textColor":"white"},"view":{"type":"portrait-simple"}}'
+      };
+
+      fetch('https://astronomy.p.rapidapi.com/api/v2/studio/moon-phase', options)
+        .then(response => response.json())
+        .then(response => {console.log(response), showMoon(response)})
+        .catch(err => console.error(err));
+        
+        function showMoon(response){
+          const img = document.getElementById("pic")
+          img.src = response.data.imageUrl
+        }
+
+        const options_2 = {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json',
+            'X-RapidAPI-Key': 'ff4086d773msh829a5e3e92ff899p1b3b5ajsnedab1db48561',
+            'X-RapidAPI-Host': 'astronomy.p.rapidapi.com'
+          },
+          body: '{"observer":{"date":"2022-09-30","latitude":-27.470125,"longitude":153.021072},"style":"default","view":{"parameters":{"constellation":"ori"},"type":"constellation"}}'
+        };
+
+        fetch('https://astronomy.p.rapidapi.com/api/v2/studio/star-chart', options_2)
+          .then(response => response.json())
+          .then(response => {console.log(response), showStar(response)})
+          .catch(err => console.error(err));
+
+        function showStar(response){
+          const img = document.getElementById("pic_2")
+          img.src = response.data.imageUrl
+        }
+
+        // var mysql = require('mysql');
+        // var connection = mysql.createConnection({
+        //   host     : 'localhost',
+        //   user     : 'root',
+        //   password : 'root',
+        //   database : 'w5_example'
+        // });
+        
+        // connection.connect();
+        
+        // connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
+        //   if (error) throw error;
+        //   console.log('The solution is: ', results[0].solution);
+        // });
+
+        import { createRequire } from "module";
+        const require = createRequire(import.meta.url);
+        const yourData = require("./your.json");
+
+        const express = require('express')
+        const bodyParser = require('body-parser')
+        const mysql = require('mysql')
+
+        const app = express()
+        const port = process.env.PORT || 5000;
+
+        // Parsing middleware
+        // Parse application/x-www-form-urlencoded
+        // app.use(bodyParser.urlencoded({ extended: false })); // Remove 
+        app.use(express.urlencoded({extended: true})); // New
+        // Parse application/json
+        // app.use(bodyParser.json()); // Remove
+        app.use(express.json()); // New
+
+        // MySQL Code goes here
+
+        // Listen on enviroment port or 5000
+        app.listen(port, () => console.log(`Listening on port ${port}`))
+
+        const pool  = mysql.createPool({
+          connectionLimit : 10,
+          host            : 'localhost',
+          user            : 'root',
+          password        : 'password',
+          database        : 'w5_example'
+        })
+
+        // Get all beers
+        app.get('', (req, res) => {
+            pool.getConnection((err, connection) => {
+                if(err) throw err
+                console.log('connected as id ' + connection.threadId)
+                connection.query('SELECT * from Customer', (err, rows) => {
+                    connection.release() // return the connection to pool
+
+                    if (!err) {
+                        res.send(rows)
+                    } else {
+                        console.log(err)
+                    }
+
+                    // if(err) throw err
+                    console.log('The data from beer table are: \n', rows)
+                })
+            })
+        })
+
+    </script>
+	</body>
+</html>
