@@ -1,0 +1,753 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--title-italic: 'Bauer Bodoni Pro_1 W01 Roman' , serif;
+	--title-font: Georgia, 'Times New Roman', Times, serif;
+	--button-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	--description-font: Cambria, Cochin, Georgia, Times, 'Times New Roman';
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	padding: 5%, 5%;
+}
+
+/* Main menu */
+
+#main-menu {
+	background-color: rgb(0, 0, 0, 80%);
+	position: fixed;
+	width: 100%;
+	z-index: 99;
+    text-align: center;
+	/* display: flex; */
+}
+
+#main-menu ul {
+	list-style-type: None;
+	flex-grow: 4;
+}
+
+#main-menu a {
+	display: block;
+	text-decoration: None;
+	padding: 5px 0;
+	transition: 0.5s;
+	font-family: var(--button-font);
+	font-size: 14px;
+	letter-spacing: 1px;
+	color: rgb(218, 218, 218);
+}
+
+#main-menu a:hover{
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}
+
+#main-menu .current a {
+	padding: 10px 0;
+	background-color: rgb(255, 255, 255);
+	color: black;
+}
+
+/* Header */
+
+header {
+	background-color: rgb(0, 0, 0);
+}
+
+#page-header {
+    background-image: url(../images/header_background.jpg);
+	background-size: cover;
+	background-position: center center;
+	text-align: center;
+}
+
+#page-header #logo img {
+	max-height: 150px;
+	width: auto;
+}
+
+.banner-title {
+	background-color: rgba(0, 0, 0, 0.55);
+	height: 400px;
+	padding: 5%;
+	display: block;
+	align-items: center;
+    padding-top: 200px;
+    color: white;
+}
+
+.banner-title .logo-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-title h1 {
+	padding: 5% 0;
+    font-size: 50px;
+	letter-spacing: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .banner-title h3 {
+	padding-top: 50px;
+	color: white;
+	font-family: var(--title-italic);
+	font-size: 30px;
+	letter-spacing: 2px;
+	font-style: italic;
+} */
+
+#page-header .posts p {
+	/* padding: 5% 10%; */
+	font-family: var(--description-font);
+    font-size: 20px;
+	letter-spacing: 1px;
+	line-height: 30px;
+    color: black;
+}
+
+/* #page-header .cta-button {
+	padding: 5%;
+} */
+
+/* #page-header .cta-button a {
+	background-color:rgb(0, 0, 0);
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-family: var(--button-font);
+	letter-spacing: 1px;
+	transition: 0.5s;
+} */
+
+/* #page-header .cta-button a:hover {
+	background-color:rgb(255, 255, 255);
+	padding: 15px 30px;
+	color: rgb(0, 0, 0);
+} */
+
+/* .page-home #page-header .banner-title h3 {
+	padding-top: 10px;
+} */
+
+.page-destination #page-header {
+	background-image: url(../images/arcticlight.jpeg);
+}
+
+.page-experience #page-header {
+	background-image: url(../images/stargazing.jpeg);
+}
+
+.page-water-activities #page-header {
+	background-image: url(../images/beach2.jpeg);
+}
+
+.page-mountain-activities #page-header {
+	background-image: url(../images/mountain.jpeg);
+}
+
+.page-room #page-header {
+	background-image: url(../images/hotel_room1.jpeg);
+}
+
+.page-dining #page-header {
+	background-image: url(../images/restaurant.jpeg);
+}
+
+.page-contact #page-header {
+	background-image: url(../images/hotel_room1.jpeg);
+}
+
+.page-availability #page-header, .page-guestInfo #page-header {
+	min-height: 172px;
+}
+
+/* popular-photos */
+
+#popular-photos {
+	margin: 0% 5%;
+}
+
+#popular-photos h2 {
+	padding: 5% 0;
+	font-family: var(--title-font);
+	letter-spacing: 1px;
+}
+
+/* #popular-photos p {
+    float: right;
+} */
+
+/* #popular-photos .posts img {
+	width: 100%;
+} */
+
+#popular-photos .posts {
+	position: relative;
+	margin: 30px 0;
+	height: 300px;
+	/* display: flex; */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#popular-photos .posts img {
+	flex-shrink: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	filter: brightness(70%);
+	transition: 1.5s ease;
+}
+
+#popular-photos .posts:hover img {
+	transform: scale(1.2);
+	filter: brightness(100%);
+}
+
+#popular-photos .posts .wraper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	position: absolute;
+	top: 70%;
+	left: 10%;
+}
+
+#popular-photos .posts .description {
+	color: white;
+	letter-spacing: 1px;
+	font-size: 30px;
+	font-family: var(--description-font);
+	padding: 10px 0;
+}
+
+#popular-photos .btn {
+	width: 120px;
+	color: rgb(0, 0, 0);
+	font-size: 14px;
+	cursor: pointer;
+	font-family: var(--button-font);
+	/* transition: 0.5s; */
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+
+/* popular-parks */
+
+#popular-parks {
+	margin: 0% 5%;
+}
+
+#popular-parks h2 {
+	padding: 5% 0;
+	font-family: var(--title-font);
+	letter-spacing: 1px;
+}
+
+#popular-parks .posts {
+	position: relative;
+	margin: 30px 0;
+	height: 300px;
+	/* display: flex; */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#popular-parks .posts img {
+	flex-shrink: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	filter: brightness(70%);
+	transition: 1.5s ease;
+}
+
+#popular-parks .posts:hover img {
+	transform: scale(1.2);
+	filter: brightness(100%);
+}
+
+#popular-parks .posts .wraper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	position: absolute;
+	top: 70%;
+	left: 10%;
+}
+
+#popular-parks .posts .description {
+	color: white;
+	letter-spacing: 1px;
+	font-size: 30px;
+	font-family: var(--description-font);
+	padding: 10px 0;
+}
+
+#popular-parks .btn {
+	width: 120px;
+	color: rgb(0, 0, 0);
+	font-size: 14px;
+	cursor: pointer;
+	font-family: var(--button-font);
+	/* transition: 0.5s; */
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+  
+/* #features .category-brief .btn:hover {
+	background-color: rgb(255, 255, 255);
+	color: #000000;
+} */
+
+/* #features .cta-button {
+	padding: 5%;
+}
+
+#features .cta-button a {
+	background-color:rgb(0, 0, 0);
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-family: var(--button-font);
+	transition: 0.5s;
+	letter-spacing: 1px;
+}
+
+#features .cta-button a:hover {
+	background-color:rgb(255, 255, 255);
+	padding: 15px 30px;
+	color: rgb(0, 0, 0);
+} */
+
+/* Slideshow's buttons */
+
+/* .prev {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 30px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	background-color: rgb(255, 255, 255, 0.3)
+}
+
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	right:0%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 30px;
+	transition: 0.6s ease;
+	border-radius: 3px 0 0 3px;
+	user-select: none;
+	background-color: rgb(255, 255, 255, 0.3)
+}
+
+.prev:hover, .next:hover {
+	background-color: white;
+	color: black;
+} */
+
+/* Footer */
+
+#page-footer {
+	background-color: rgb(0, 0, 0);
+	text-align: center;
+}
+
+#page-footer .logo img {
+	height: 100px;
+	width: auto;
+}
+
+#secondary-menu a {
+	display: block;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-family: var(--button-font);
+	font-size: 10px;
+}
+
+/* page-guestInfo form */
+
+/* .page-guestInfo {
+	background-image: url(../images/sunset.jpeg);
+	background-position: center center;
+	background-size: cover;
+	overflow-x: hidden;
+}
+
+.page-guestInfo #submit-form {
+	display: flex;
+	justify-content: center;
+}
+
+.page-guestInfo #submit-form .guest-info {
+	margin: 100px 20px;
+	padding: 3%;
+	max-width: 600px;
+	color: #ffffff;
+	background-color: rgb(0, 0, 0, 0.5);
+	flex-grow: 4;
+	z-index: 2;
+}
+
+.page-guestInfo .info {
+	border: #ffffff solid 1px;
+	box-sizing: border-box;
+}
+
+.page-guestInfo #submit-form legend {
+	margin: 0 20px;
+	padding: 10px;
+	font-size: 30px;
+	letter-spacing: 1px;
+	font-style: italic;
+}
+
+.page-guestInfo #submit-form label {
+	display: block;
+	margin: 15px 10%;
+	font-size: 20px;
+	letter-spacing: 1px;
+	font-family: var(--title-font);
+}
+
+#submit-form input, #submit-form select {
+	width: 95%;
+	padding: 10px 0;
+	margin: 10px 0;
+	padding-left: 15px;
+	font-size: 16px;
+	font-family: var(--button-font);
+	letter-spacing: 1px;
+}
+
+.page-guestInfo #submit-form label button {
+	float: right;
+	background-color: #00000000;
+	border: solid 1px white;
+	color: rgb(255, 255, 255);
+	padding: 10px 25px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	transition: 0.5s;
+	letter-spacing: 1px;
+	font-family: var(--button-font);
+	cursor: pointer;
+}
+
+.page-guestInfo #submit-form label button:hover {
+	background-color: #ffffff;
+	color: #000000;
+} */
+
+/* Birds animation */
+/* 
+.bird-container--one {
+	position: absolute;
+	bottom: 5%;
+	left: -10%;
+	transform: scale(0) translateX(-10vw);
+	will-change: transform;
+	
+	animation-name: fly;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	
+	animation-duration: 15s;
+	animation-delay: 0;
+}
+
+.bird-container--two {
+	position: absolute;
+	top: 90%;
+	left: -10%;
+	transform: scale(0) translateX(-10vw);
+	will-change: transform;
+	
+	animation-name: fly;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	
+	animation-duration: 17s;
+	animation-delay: 1s;
+}
+
+.bird--one {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+	background-size: auto 100%;
+	width: 88px;
+	height: 125px;
+	
+	animation-name: fly-cycle;
+	animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+
+	animation-duration: 1s;
+	animation-delay: -0.5s;		
+}
+
+.bird--two {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+	background-size: auto 100%;
+	width: 88px;
+	height: 125px;
+	
+	animation-name: fly-cycle;
+	animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+
+	animation-duration: 1.25s;
+	animation-delay: -0.25s;	
+}
+
+@keyframes fly-cycle {
+	
+	100% {
+		background-position: -900px 0;
+	}
+	
+}
+
+@keyframes fly {
+	
+	0% {
+		transform: scale(0.3) translateX(-10vw);
+	}
+	
+	10% {
+		transform: translateY(2vh) translateX(10vw) scale(0.4);
+	}
+	
+	20% {
+		transform: translateY(0vh) translateX(30vw) scale(0.5);
+	}
+	
+	30% {
+		transform: translateY(4vh) translateX(50vw) scale(0.6);
+	}
+	
+	40% {
+		transform: translateY(2vh) translateX(70vw) scale(0.6);
+	}
+	
+	50% {
+		transform: translateY(0vh) translateX(90vw) scale(0.6);
+	}
+	
+	60% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	
+	100% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	
+} */
+
+/* Tablet Size Overrides */
+@media only screen and (min-width: 700px) {
+
+	body {
+		background: rgb(255, 255, 255);
+	}
+
+	/* Menu */
+	
+	#main-menu {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#main-menu ul{
+		display: flex;
+		justify-content: flex-end;
+		flex-direction: row;
+		list-style-type: None;
+		align-items: center;
+		padding-right: 20px;
+	}
+
+	#main-menu a {
+		padding: 0 10px;
+	}
+
+	#main-menu .current a {
+		padding: 10px;
+	}
+
+	#main-menu a:hover{
+		padding: 10px 20px;
+	}
+
+    /* Page header */
+
+    .banner-title h1 {
+        font-size: 80px;
+    }
+
+    #page-header .banner-title p {
+        font-size: 30px;
+    }
+
+	/* popular-photos */
+
+    #popular-photos div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+	#popular-photos .posts {
+		width: 24%;
+		height: 200px;
+	}
+
+	#popular-photos .posts .description {
+		font-size: 20px;
+	}
+
+    /* popular-parks */
+
+    #popular-parks div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+	#popular-parks .posts {
+		width: 24%;
+		height: 200px;
+	}
+
+	#popular-parks .posts .description {
+		font-size: 20px;
+	}
+
+    /*  */
+
+	.page-home #features div {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.page-destination #features div {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.page-experience #features div {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.page-experience #features .category-brief {
+		width: 49%;
+	}
+
+	.page-water-activities #features div {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.page-mountain-activities #features div {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#features .rooms .room-option {
+		display: flex;
+	}
+
+	.page-contact #features {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	/* Footer */
+	
+	#page-footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	#page-footer #secondary-menu {
+		padding-right: 20px;
+	}
+
+	#page-footer ul {
+		display: flex;
+		list-style-type: none
+	}
+
+	#page-footer a {
+		padding: 5px 1px;
+		margin: 0 10px;
+	}
+
+	#page-footer a:hover {
+		border-bottom: solid #ffffff 1px;
+	}
+
+}
+
+/* Desktop Size Overrides */
+@media only screen and (min-width: 1200px) {
+
+	body {
+		background: rgb(255, 255, 255);
+	}
+
+	#main-menu a {
+		font-size: 1em;
+		letter-spacing: 1px;
+		padding: 10px 40px;
+	}
+
+	#main-menu .current a {
+		padding: 10px 40px;
+	}
+
+	#main-menu a:hover{
+		padding: 10px 60px;
+	}
+
+	#page-header p {
+		font-size: 1.1em;
+		padding: 5% 20%;
+	}
+
+}
