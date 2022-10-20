@@ -75,7 +75,8 @@ header {
 }
 
 .banner-title {
-	background-color: rgba(0, 0, 0, 0.55);
+    background-image: linear-gradient(rgba(255, 255, 255, 0),rgba(255, 255, 255, 0),rgba(255, 255, 255, 0),rgba(255, 255, 255, 0),rgba(255, 255, 255));
+	background-color: rgba(0, 0, 0, 0.4);
 	height: 400px;
 	padding: 5%;
 	display: block;
@@ -97,15 +98,6 @@ header {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-/* .banner-title h3 {
-	padding-top: 50px;
-	color: white;
-	font-family: var(--title-italic);
-	font-size: 30px;
-	letter-spacing: 2px;
-	font-style: italic;
-} */
-
 #page-header .banner-title p {
 	padding: 5% 10%;
 	font-family: var(--description-font);
@@ -114,88 +106,29 @@ header {
 	line-height: 30px;
 }
 
-/* #page-header .cta-button {
-	padding: 5%;
-} */
-
-/* #page-header .cta-button a {
-	background-color:rgb(0, 0, 0);
-	padding: 10px 20px;
-	border-radius: 5px;
-	text-decoration: none;
-	color: rgb(255, 255, 255);
-	font-family: var(--button-font);
-	letter-spacing: 1px;
-	transition: 0.5s;
-} */
-
-/* #page-header .cta-button a:hover {
-	background-color:rgb(255, 255, 255);
-	padding: 15px 30px;
-	color: rgb(0, 0, 0);
-} */
-
-/* .page-home #page-header .banner-title h3 {
-	padding-top: 10px;
-} */
-
-.page-destination #page-header {
-	background-image: url(../images/arcticlight.jpeg);
-}
-
-.page-experience #page-header {
-	background-image: url(../images/stargazing.jpeg);
-}
-
-.page-water-activities #page-header {
-	background-image: url(../images/beach2.jpeg);
-}
-
-.page-mountain-activities #page-header {
-	background-image: url(../images/mountain.jpeg);
-}
-
-.page-room #page-header {
-	background-image: url(../images/hotel_room1.jpeg);
-}
-
-.page-dining #page-header {
-	background-image: url(../images/restaurant.jpeg);
-}
-
-.page-contact #page-header {
-	background-image: url(../images/hotel_room1.jpeg);
-}
-
-.page-availability #page-header, .page-guestInfo #page-header {
-	min-height: 172px;
-}
-
 /* popular-photos */
 
 #popular-photos {
 	margin: 0% 5%;
 }
 
+
 #popular-photos h2 {
-	padding: 5% 0;
+    padding: 5% 0;
 	font-family: var(--title-font);
 	letter-spacing: 1px;
 }
 
-/* #popular-photos p {
-    float: right;
-} */
-
-/* #popular-photos .posts img {
-	width: 100%;
-} */
+#popular-photos div .full-posts {
+    display: block;
+    position: relative;
+    width: 300px;
+}
 
 #popular-photos .posts {
 	position: relative;
 	margin: 30px 0;
 	height: 300px;
-	/* display: flex; */
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -231,6 +164,13 @@ header {
 	font-size: 30px;
 	font-family: var(--description-font);
 	padding: 10px 0;
+}
+
+#popular-photos .posts p {
+    color:rgb(0, 0, 0);
+    /* display: block; */
+    position: relative;
+    font-size: 40px;
 }
 
 #popular-photos .btn {
@@ -376,19 +316,134 @@ header {
 	color: black;
 } */
 
+/* Page-Mission */
+
+#limited-mission {
+    display: block;
+    text-align: center;
+    padding: 5% 0;
+}
+
+#limited-mission h2 {
+    padding: 10px;
+}
+
+#limited-mission .mission-description {
+    border-radius: 10px;
+    border: solid rgb(179, 179, 179);
+    font-size: 20px;
+    padding: 5%;
+    margin: 0 5%;
+    margin-bottom: 3%;
+    text-align: left;
+}
+
+#limited-mission .btn {
+    width: 120px;
+	color: rgb(0, 0, 0);
+	font-size: 18px;
+    padding: 5px 20px;
+    margin: 5px;
+	cursor: pointer;
+	font-family: var(--button-font);
+	text-decoration: none;
+    border: solid rgb(179, 179, 179);
+    border-radius: 30px;
+    /* position: relative;
+    left: 35%; */
+}
+
+#common-mission {
+    text-align: center;
+    padding: 5%;
+}
+
+#common-mission .mission-photos {
+    overflow: hidden;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    border-radius: 30px;
+    /* justify-content: center; */
+    margin: 2%;
+}
+
+#common-mission .mission-photos img {
+    /* width: 300px; */
+    object-fit: cover;
+    flex-shrink: 0;
+    height: 100%;
+	/* width: 100%; */
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+}
+
+#common-mission .common-description {
+    padding: 20px;
+}
+
+#common-mission .common-description h2 {
+    padding: 10px;
+}
+
+#common-mission .common-description .mission-description {
+    border: solid rgb(179, 179, 179);
+    border-radius: 30px;
+    padding: 40px 20px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#common-mission .common-description .btn {
+    width: 120px;
+	color: rgb(0, 0, 0);
+	font-size: 18px;
+    padding: 5px 20px;
+    margin: 5px;
+	cursor: pointer;
+	font-family: var(--button-font);
+	text-decoration: none;
+    border: solid rgb(179, 179, 179);
+    border-radius: 30px;
+}
+
+#customize-mission {
+    text-align: center;
+    padding: 5%;
+}
+
+#customize-mission h2 {
+    margin-bottom: 20px;
+}
+
+#customize-mission .btn {
+    /* width: 120px; */
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+    padding: 10px 20px;
+    margin: 10px;
+	cursor: pointer;
+	font-family: var(--button-font);
+	text-decoration: none;
+    border: solid rgb(179, 179, 179);
+    border-radius: 30px;
+}
+
 /* Footer */
 
 #page-footer {
-	background-color: rgb(0, 0, 0);
+	background-image: url(../images/footer.jpg);
+    background-size: cover;
+	background-position: center center;
 	text-align: center;
+    color: #ffffff;
 }
 
-#page-footer .logo img {
-	height: 100px;
-	width: auto;
-}
-
-#secondary-menu a {
+#secondary-menu {
 	display: block;
 	text-decoration: none;
 	color: rgb(255, 255, 255);
@@ -654,58 +709,72 @@ header {
 		font-size: 20px;
 	}
 
-    /*  */
+    /*  mission page */
 
-	.page-home #features div {
-		display: flex;
-		justify-content: space-between;
-	}
+    #limited-mission .btn {
+        position: relative;
+        left: 25%;
+    }
 
-	.page-destination #features div {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
+    #common-mission {
+        display: flex;
+        /* justify-content: space-between; */
+    }
 
-	.page-experience #features div {
-		display: flex;
-		justify-content: space-between;
-	}
+    #common-mission .mission-photos {
+        width: 24%;
+        height: 200px;
+    }
 
-	.page-experience #features .category-brief {
-		width: 49%;
-	}
+    #common-mission .common-description {
+        width: 50%;
+        text-align: left;
+        /* padding: 20px 0; */
+    }
 
-	.page-water-activities #features div {
-		display: flex;
-		justify-content: space-between;
-	}
+    #common-mission .common-description .btn {
+        position: relative;
+        left: 25%;
+    }
 
-	.page-mountain-activities #features div {
-		display: flex;
-		justify-content: space-between;
-	}
+    #customize-mission {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-	#features .rooms .room-option {
-		display: flex;
-	}
-
-	.page-contact #features {
-		display: flex;
-		justify-content: space-between;
-	}
 
 	/* Footer */
 	
 	#page-footer {
+        padding: 5%;
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		/* align-items: center; */
 	}
 
-	#page-footer #secondary-menu {
-		padding-right: 20px;
-	}
+    #page-footer #made-by {
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    #page-footer #contact-us {
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    #page-footer h3 {
+        font-family: var(--button-font);
+        padding-left: 20px;
+    }
+
+    #page-footer p {
+        font-family: var(--button-font);
+        padding: 5px;
+        padding-left: 20px;
+    }
 
 	#page-footer ul {
 		display: flex;
