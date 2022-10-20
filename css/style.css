@@ -184,6 +184,8 @@ header {
 	text-decoration: none;
 }
 
+/* find park page */
+
 /* popular-parks */
 
 #popular-parks {
@@ -677,7 +679,7 @@ header {
         font-size: 30px;
     }
 
-	/* popular-photos */
+	/* popular-photos */	
 
     #popular-photos div {
         display: flex;
@@ -790,7 +792,127 @@ header {
 		border-bottom: solid #ffffff 1px;
 	}
 
-}
+	/* find park */
+	.page-find #popular-photos{
+		padding-bottom: 5%;
+	}
+	
+	.page-find #popular-photos h2, #park-gallery h2{
+		padding: 3% 0% 1% 0%;
+	}
+	
+	.page-find #popular-photos p, #park-gallery p{
+		padding: 0% 0% 3% 0%;
+	}
+	
+	.page-find #popular-photos h2:first-of-type:first-letter, #park-gallery h2:first-of-type:first-letter {
+		float: top;
+		color: rgb(94, 94, 255);
+	}
+	
+	.page-find #star-icons{
+		display: flex;
+		flex-direction: row;
+		width: 80%;
+		justify-content: space-between;
+		text-align: center;
+	}
+	.page-find #star-icons div{
+		display: flex;
+		flex-direction: column;
+		width: 5%;
+		/* border: black 2px solid; */
+	}
+
+	.page-find #park-gallery{
+		margin: 0% 5%;
+	}
+
+	.page-find #park-gallery .posts{
+		height: auto;
+		/* border: white solid; */
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)	}
+
+	.page-find #park-gallery h2{
+		font-family: var(--title-font);
+		letter-spacing: 1px;
+	}
+	
+	.page-find #park-gallery > div {
+		flex-direction: column;
+		display:-webkit-inline-box;
+		padding: 5% 0%;
+		overflow: scroll;
+        /* justify-content: space-between; */
+    }
+	
+	.page-find #park-gallery .posts {
+		display: flex;
+		flex-direction: column;
+		width: 25%;
+		border-radius: 10px;
+		margin-right: 30px;
+		margin-left: 1%;
+	}
+	
+	.page-find #park-gallery .posts .park-img{
+		width: 80%;
+		border-radius: 10px;
+		margin: 6% 10%; 
+		height: 150px;
+	}	
+
+	.page-find #park-gallery .posts h3{
+		color: black;
+		margin: 0% 10%; 
+	}
+
+	.page-find #park-gallery .posts div:first-of-type{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.page-find #park-gallery .posts div:nth-child(3){
+		margin: 5% 10%;
+	}
+
+	.page-find #park-gallery .posts div:nth-child(3) h4{
+		margin-bottom: 2%;
+	}
+
+	.checked {
+		color: blue;
+	  }
+	.uncheck{
+		opacity: 0.5;
+	}
+	.page-find #park-gallery .posts div > div {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 5%;
+		align-items: center;
+	}
+	.page-find #park-gallery .posts div > div h4 {
+		color: orange;
+		font-size: 1.5em;
+	}
+	.page-find #park-gallery .posts .post-icon{
+		width: 10%;
+		margin: 0%;
+		border-radius: 0%;
+	}
+	.page-find #park-gallery .posts .get-here{
+		display: block;
+		text-align: center;
+		margin-top: 10%;
+		padding: 10% 0%;
+		background-color: rgb(127, 178, 255);
+		width: 100%;
+		border-top: black dotted;
+		/* border-radius: 10px; */
+	}
+
+
 
 /* Desktop Size Overrides */
 @media only screen and (min-width: 1200px) {
@@ -818,4 +940,5 @@ header {
 		padding: 5% 20%;
 	}
 
+}
 }
