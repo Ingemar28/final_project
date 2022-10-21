@@ -8,6 +8,7 @@
 	--title-font: Georgia, 'Times New Roman', Times, serif;
 	--button-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	--description-font: Cambria, Cochin, Georgia, Times, 'Times New Roman';
+    --stargo-font: 'Ubuntu', sans-serif;
     --starGo-blue: rgb(144, 153, 243);
     --starGo-yellow: rgb(236, 223, 152);
 }
@@ -65,7 +66,7 @@ header {
 }
 
 #page-header {
-    background-image: url(../images/header_background.jpg);
+    background-image: url(../images/headerstars);
 	background-size: cover;
 	background-position: center center;
 	text-align: center;
@@ -84,7 +85,6 @@ header {
     rgba(255, 255, 255, 0),
     rgba(255, 255, 255)
     );
-	background-color: rgba(0, 0, 0, 0.4);
 	height: 400px;
 	padding: 5%;
 	display: block;
@@ -103,12 +103,12 @@ header {
 	padding: 5% 0;
     font-size: 50px;
 	letter-spacing: 3px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: var(--stargo-font);
 }
 
 #page-header .banner-title p {
 	padding: 5% 10%;
-	font-family: var(--description-font);
+	font-family: var(--stargo-font);
     font-size: 20px;
 	letter-spacing: 1px;
 	line-height: 30px;
@@ -129,7 +129,7 @@ header {
 
 
 #popular-photos h2 , #park-gallery h2{
-	font-family: var(--title-font);
+	font-family: var(--stargo-font);
 	letter-spacing: 1px;
     padding-right: 20px;
 }
@@ -143,7 +143,7 @@ header {
 }
 
 #popular-photos .title p {
-	font-family: var(--button-font);
+	font-family: var(--stargo-font);
     font-size: 18px;
     letter-spacing: 1px;
     position: absolute;
@@ -169,6 +169,7 @@ header {
     align-items: center;
     overflow: hidden;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
 }
 
 #popular-photos .posts img {
@@ -198,7 +199,7 @@ header {
 	color: white;
 	letter-spacing: 1px;
 	font-size: 30px;
-	font-family: var(--description-font);
+	font-family: var(--stargo-font);
 	padding: 10px 0;
 }
 
@@ -238,7 +239,7 @@ header {
 }
 
 #popular-parks h2 {
-	font-family: var(--title-font);
+	font-family: var(--stargo-font);
 	letter-spacing: 1px;
     padding-right: 20px;
 }
@@ -252,7 +253,7 @@ header {
 }
 
 #popular-parks p {
-	font-family: var(--button-font);
+	font-family: var(--stargo-font);
     font-size: 18px;
     letter-spacing: 1px;
     position: absolute;
@@ -268,6 +269,7 @@ header {
     align-items: center;
     overflow: hidden;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
 }
 
 #popular-parks .posts img {
@@ -297,7 +299,7 @@ header {
 	color: white;
 	letter-spacing: 1px;
 	font-size: 30px;
-	font-family: var(--description-font);
+	font-family: var(--stargo-font);
 	padding: 10px 0;
 }
 
@@ -483,187 +485,6 @@ header {
 	font-family: var(--button-font);
 	font-size: 10px;
 }
-
-/* page-guestInfo form */
-
-/* .page-guestInfo {
-	background-image: url(../images/sunset.jpeg);
-	background-position: center center;
-	background-size: cover;
-	overflow-x: hidden;
-}
-
-.page-guestInfo #submit-form {
-	display: flex;
-	justify-content: center;
-}
-
-.page-guestInfo #submit-form .guest-info {
-	margin: 100px 20px;
-	padding: 3%;
-	max-width: 600px;
-	color: #ffffff;
-	background-color: rgb(0, 0, 0, 0.5);
-	flex-grow: 4;
-	z-index: 2;
-}
-
-.page-guestInfo .info {
-	border: #ffffff solid 1px;
-	box-sizing: border-box;
-}
-
-.page-guestInfo #submit-form legend {
-	margin: 0 20px;
-	padding: 10px;
-	font-size: 30px;
-	letter-spacing: 1px;
-	font-style: italic;
-}
-
-.page-guestInfo #submit-form label {
-	display: block;
-	margin: 15px 10%;
-	font-size: 20px;
-	letter-spacing: 1px;
-	font-family: var(--title-font);
-}
-
-#submit-form input, #submit-form select {
-	width: 95%;
-	padding: 10px 0;
-	margin: 10px 0;
-	padding-left: 15px;
-	font-size: 16px;
-	font-family: var(--button-font);
-	letter-spacing: 1px;
-}
-
-.page-guestInfo #submit-form label button {
-	float: right;
-	background-color: #00000000;
-	border: solid 1px white;
-	color: rgb(255, 255, 255);
-	padding: 10px 25px;
-	margin-top: 10px;
-	margin-bottom: 30px;
-	text-align: center;
-	text-decoration: none;
-	font-size: 16px;
-	transition: 0.5s;
-	letter-spacing: 1px;
-	font-family: var(--button-font);
-	cursor: pointer;
-}
-
-.page-guestInfo #submit-form label button:hover {
-	background-color: #ffffff;
-	color: #000000;
-} */
-
-/* Birds animation */
-/* 
-.bird-container--one {
-	position: absolute;
-	bottom: 5%;
-	left: -10%;
-	transform: scale(0) translateX(-10vw);
-	will-change: transform;
-	
-	animation-name: fly;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	
-	animation-duration: 15s;
-	animation-delay: 0;
-}
-
-.bird-container--two {
-	position: absolute;
-	top: 90%;
-	left: -10%;
-	transform: scale(0) translateX(-10vw);
-	will-change: transform;
-	
-	animation-name: fly;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	
-	animation-duration: 17s;
-	animation-delay: 1s;
-}
-
-.bird--one {
-	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
-	background-size: auto 100%;
-	width: 88px;
-	height: 125px;
-	
-	animation-name: fly-cycle;
-	animation-timing-function: steps(10);
-	animation-iteration-count: infinite;
-
-	animation-duration: 1s;
-	animation-delay: -0.5s;		
-}
-
-.bird--two {
-	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
-	background-size: auto 100%;
-	width: 88px;
-	height: 125px;
-	
-	animation-name: fly-cycle;
-	animation-timing-function: steps(10);
-	animation-iteration-count: infinite;
-
-	animation-duration: 1.25s;
-	animation-delay: -0.25s;	
-}
-
-@keyframes fly-cycle {
-	
-	100% {
-		background-position: -900px 0;
-	}
-	
-}
-
-@keyframes fly {
-	
-	0% {
-		transform: scale(0.3) translateX(-10vw);
-	}
-	
-	10% {
-		transform: translateY(2vh) translateX(10vw) scale(0.4);
-	}
-	
-	20% {
-		transform: translateY(0vh) translateX(30vw) scale(0.5);
-	}
-	
-	30% {
-		transform: translateY(4vh) translateX(50vw) scale(0.6);
-	}
-	
-	40% {
-		transform: translateY(2vh) translateX(70vw) scale(0.6);
-	}
-	
-	50% {
-		transform: translateY(0vh) translateX(90vw) scale(0.6);
-	}
-	
-	60% {
-		transform: translateY(0vh) translateX(110vw) scale(0.6);
-	}
-	
-	100% {
-		transform: translateY(0vh) translateX(110vw) scale(0.6);
-	}
-	
-} */
 
 /* Tablet Size Overrides */
 @media only screen and (min-width: 700px) {
@@ -916,7 +737,7 @@ header {
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)	}
 
 	.page-find #park-gallery h2{
-		font-family: var(--title-font);
+		font-family: var(--stargo-font);
 		letter-spacing: 1px;
 	}
 	
@@ -989,6 +810,107 @@ header {
 		border-top: black dotted;
 		/* border-radius: 10px; */
 	}
+
+    /* upload photos */
+    
+    #upload-photos .upload-function {
+        display: flex;
+        padding: 5% 0;
+    }
+
+    #upload-photos .upload-function .description {
+        width: 80%;
+    }
+
+    #upload-photos .upload-function .description form {
+        width: 100%;
+        padding-left: 5%;
+    }
+
+    #upload-photos .upload-function textarea {
+        /* box-sizing: border-box; */
+        width: 100%;
+        height: 200px;
+        border: rgb(195, 195, 195) solid;
+        padding: 5px;
+    }
+    
+    #upload-photos .upload-function #user-info {
+        display: flex;
+    }
+
+    #upload-photos .upload-function #user-info .profile {
+        text-align: center;
+    }
+
+    #upload-photos .upload-function #user-info .profile img {
+        border-radius: 100%;
+        object-fit: cover;
+        width: 150px;
+    }
+
+    #upload-photos .upload-function #select-button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #upload-photos .upload-function #select-button img {
+        width: 100px;
+        padding: 3%;
+    }
+
+    #upload-photos #select-button button {
+        width: 300px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        background-color: var(--starGo-blue);
+        border: none;
+        color: #ffffff;
+        /* justify-content: space-around; */
+        /* margin: 5%; */
+    }
+
+    #upload-photos #select-button button .material-icons {
+        color: #ffffff;
+        padding: 0 10%;
+        padding-right: 20%;
+    }
+
+    #bottom-decorate {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #photo-preview {
+        border: solid rgb(195, 195, 195);
+        margin: 0 10%;
+        text-align: center;
+        height: 210px;
+    }
+
+    #photo-preview img {
+        width: 100px;
+        /* height: 100px; */
+        box-sizing: border-box;
+        padding: 10%;
+        position: relative;
+        top: 25%
+        /* left: 50%; */
+    }
+
+    #upload-photos .submit {
+        width: 250px;
+        height: 60px;
+        /* display: flex; */
+        /* align-items: center; */
+        background-color: var(--starGo-blue);
+        border: none;
+        color: #ffffff;
+        margin: 54px 30px;
+    }
+
 
 
 
