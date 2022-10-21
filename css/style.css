@@ -75,7 +75,13 @@ header {
 }
 
 .banner-title {
-    background-image: linear-gradient(rgba(255, 255, 255, 0),rgba(255, 255, 255, 0),rgba(255, 255, 255, 0),rgba(255, 255, 255, 0),rgba(255, 255, 255));
+    background-image: linear-gradient(rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255)
+    );
 	background-color: rgba(0, 0, 0, 0.4);
 	height: 400px;
 	padding: 5%;
