@@ -128,17 +128,17 @@ header {
 }
 
 
-#popular-photos h2 {
+#popular-photos h2 , #park-gallery h2{
 	font-family: var(--title-font);
 	letter-spacing: 1px;
     padding-right: 20px;
 }
 
-#popular-photos h2:first-child::first-letter {
+#popular-photos h2:first-child::first-letter , #park-gallery h2:first-child::first-letter{
     color: var(--starGo-blue);
 }
 
-#popular-photos h2:nth-child(2)::first-letter {
+#popular-photos h2:nth-child(2)::first-letter, #park-gallery h2:nth-child(2)::first-letter{
     color: var(--starGo-yellow);
 }
 
@@ -916,7 +916,7 @@ header {
 	.page-find #park-gallery > div {
 		flex-direction: column;
 		display:-webkit-inline-box;
-		padding: 1% 0%;
+		padding: 2% 0%;
 		overflow: scroll;
         /* justify-content: space-between; */
     }
