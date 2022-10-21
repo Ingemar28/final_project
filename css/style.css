@@ -809,12 +809,54 @@ header {
 	}
 
 	/* find park */
+	.page-find #page-header .banner-title > div{
+		display: block;
+		padding-left: 10%;
+	}
+	
+	.page-find #page-header h1{
+		text-align: left;
+		padding-top: 0%;
+	}
+
+	.page-find #page-header .banner-title p {
+		font: var(--title-italic);
+		text-align: left;
+	}
+	
+	.page-find #page-header input{
+		width: 80%;
+		font-size: 1.5em;
+		background-image: url(../images/search.png);
+		background-repeat: no-repeat;
+		background-size: 4%;
+		background-position: 1%;
+		background-color: rgba(122, 122, 122, 0.479);
+		color: rgb(230, 230, 230);
+		border: none;
+		padding: 1%;
+		padding-left: 5%;
+	}
+
+	.page-find #page-header input::placeholder{
+		color: #dedede;
+	}
+
+	.page-find #popular-photos, .page-find #park-gallery{
+		padding-left: 8%;
+		margin-top: 4%;
+		margin-bottom: 8%;
+		/* height: 400px; */
+
+		border-left: black 3px solid;
+	}
+
 	.page-find #popular-photos{
 		padding-bottom: 5%;
 	}
 	
 	.page-find #popular-photos h2, #park-gallery h2{
-		padding: 3% 0% 1% 0%;
+		padding: 0% 0% 1% 0%;
 	}
 	
 	.page-find #popular-photos p, #park-gallery p{
@@ -841,7 +883,8 @@ header {
 	}
 
 	.page-find #park-gallery{
-		margin: 0% 5%;
+		margin-left: 5%;
+		margin-right: 5%;
 	}
 
 	.page-find #park-gallery .posts{
@@ -857,7 +900,7 @@ header {
 	.page-find #park-gallery > div {
 		flex-direction: column;
 		display:-webkit-inline-box;
-		padding: 5% 0%;
+		padding: 1% 0%;
 		overflow: scroll;
         /* justify-content: space-between; */
     }
@@ -872,20 +915,16 @@ header {
 	}
 	
 	.page-find #park-gallery .posts .park-img{
-		width: 80%;
+		width: 80%; 
 		border-radius: 10px;
 		margin: 6% 10%; 
 		height: 150px;
 	}	
 
-	.page-find #park-gallery .posts h3{
-		color: black;
-		margin: 0% 10%; 
-	}
-
-	.page-find #park-gallery .posts div:first-of-type{
+	.page-find #park-gallery .posts > div:nth-child(2){
 		display: flex;
 		justify-content: space-between;
+		margin: 0% 10%;
 	}
 
 	.page-find #park-gallery .posts div:nth-child(3){
