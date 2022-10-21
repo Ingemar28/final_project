@@ -117,14 +117,38 @@ header {
 /* popular-photos */
 
 #popular-photos {
-	margin: 0% 5%;
+	margin: 5% 5%;
+}
+
+#popular-photos .title {
+    padding: 5% 2% 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 
 #popular-photos h2 {
-    padding: 5% 0;
 	font-family: var(--title-font);
 	letter-spacing: 1px;
+    padding-right: 20px;
+}
+
+#popular-photos h2:first-child::first-letter {
+    color: var(--starGo-blue);
+}
+
+#popular-photos h2:nth-child(2)::first-letter {
+    color: var(--starGo-yellow);
+}
+
+#popular-photos .title p {
+	font-family: var(--button-font);
+    font-size: 18px;
+    letter-spacing: 1px;
+    position: absolute;
+    right:5%;
+
 }
 
 /* #popular-photos span:first-of-type:first-letter {
@@ -203,13 +227,36 @@ header {
 /* popular-parks */
 
 #popular-parks {
-	margin: 0% 5%;
+	margin: 5% 5%;
+}
+
+#popular-parks .title {
+    padding: 5% 2% 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 #popular-parks h2 {
-	padding: 5% 0;
 	font-family: var(--title-font);
 	letter-spacing: 1px;
+    padding-right: 20px;
+}
+
+#popular-parks h2:first-child::first-letter {
+    color: var(--starGo-blue);
+}
+
+#popular-parks h2:nth-child(2)::first-letter {
+    color: var(--starGo-yellow);
+}
+
+#popular-parks p {
+	font-family: var(--button-font);
+    font-size: 18px;
+    letter-spacing: 1px;
+    position: absolute;
+    right:5%;
 }
 
 #popular-parks .posts {
@@ -266,73 +313,41 @@ header {
     position: absolute;
     right: 5%;
 }
-  
-/* #features .category-brief .btn:hover {
-	background-color: rgb(255, 255, 255);
-	color: #000000;
-} */
 
-/* #features .cta-button {
-	padding: 5%;
+/* Upload Photo */
+
+#upload-photos {
+	margin: 5% 5%;
 }
 
-#features .cta-button a {
-	background-color:rgb(0, 0, 0);
-	padding: 10px 20px;
-	border-radius: 5px;
-	text-decoration: none;
-	color: rgb(255, 255, 255);
-	font-family: var(--button-font);
-	transition: 0.5s;
+#upload-photos .title {
+    padding: 5% 2% 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#upload-photos h2 {
+	font-family: var(--title-font);
 	letter-spacing: 1px;
+    padding-right: 20px;
 }
 
-#features .cta-button a:hover {
-	background-color:rgb(255, 255, 255);
-	padding: 15px 30px;
-	color: rgb(0, 0, 0);
-} */
-
-/* Slideshow's buttons */
-
-/* .prev {
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	left: 0%;
-	width: auto;
-	padding: 16px;
-	margin-top: -22px;
-	color: white;
-	font-weight: bold;
-	font-size: 30px;
-	transition: 0.6s ease;
-	border-radius: 0 3px 3px 0;
-	user-select: none;
-	background-color: rgb(255, 255, 255, 0.3)
+#upload-photos h2:first-child::first-letter {
+    color: var(--starGo-blue);
 }
 
-.next {
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	right:0%;
-	width: auto;
-	padding: 16px;
-	margin-top: -22px;
-	color: white;
-	font-weight: bold;
-	font-size: 30px;
-	transition: 0.6s ease;
-	border-radius: 3px 0 0 3px;
-	user-select: none;
-	background-color: rgb(255, 255, 255, 0.3)
+#upload-photos h2:nth-child(2)::first-letter {
+    color: var(--starGo-yellow);
 }
 
-.prev:hover, .next:hover {
-	background-color: white;
-	color: black;
-} */
+#upload-photos p {
+	font-family: var(--button-font);
+    font-size: 18px;
+    letter-spacing: 1px;
+    position: absolute;
+    right:5%;
+}
 
 /* Page-Mission */
 
@@ -855,7 +870,7 @@ header {
 		padding-bottom: 5%;
 	}
 	
-	.page-find #popular-photos h2, #park-gallery h2{
+	/* .page-find #popular-photos h2, #park-gallery h2{
 		padding: 0% 0% 1% 0%;
 	}
 	
@@ -866,7 +881,7 @@ header {
 	.page-find #popular-photos h2:first-of-type:first-letter, #park-gallery h2:first-of-type:first-letter {
 		float: top;
 		color: rgb(94, 94, 255);
-	}
+	} */
 	
 	.page-find #star-icons{
 		display: flex;
@@ -874,6 +889,7 @@ header {
 		width: 80%;
 		justify-content: space-between;
 		text-align: center;
+        padding-top: 5%;
 	}
 	.page-find #star-icons div{
 		display: flex;
