@@ -137,12 +137,21 @@ header {
 #popular-photos h2:first-child::first-letter , #park-gallery h2:first-child::first-letter{
     color: var(--starGo-blue);
 }
+.page-gallery #park-gallery h2:first-child::first-letter{
+    color: black;
+}
+.page-gallery #park-gallery h2:nth-child(2)::first-letter{
+    color: var(--starGo-blue);
+}
 
 #popular-photos h2:nth-child(2)::first-letter, #park-gallery h2:nth-child(2)::first-letter{
     color: var(--starGo-yellow);
 }
+.page-gallery #park-gallery h2:nth-child(3)::first-letter{
+    color: var(--starGo-yellow);
+}
 
-#popular-photos .title p {
+#popular-photos .title p, .page-gallery #park-gallery .title p{
 	font-family: var(--button-font);
     font-size: 18px;
     letter-spacing: 1px;
@@ -849,8 +858,8 @@ header {
 		background-color: rgba(122, 122, 122, 0.479);
 		color: rgb(230, 230, 230);
 		border: none;
-		padding: 1%;
-		padding-left: 5%;
+		padding: 2%;
+		padding-left: 6%;
 	}
 
 	.page-find #page-header input::placeholder{
@@ -989,6 +998,61 @@ header {
 		border-top: black dotted;
 		/* border-radius: 10px; */
 	}
+
+	/* Gallery */
+	.page-gallery #page-header div:nth-child(2){
+		padding-left: 0%;
+	}
+	#traingle-icon{
+		width: 3%;
+		padding: 1%;
+		rotate: 90deg;
+	}
+	.page-gallery #tag{
+		width:20%;
+		position: absolute;
+		top: 15%;
+		right: 0%;
+	}
+	.page-gallery #park-gallery .posts div:nth-child(3) b{
+		display: inline;
+	}
+	.page-gallery #park-gallery .posts div:nth-child(3) b + p{
+		display: inline;
+	}
+	.page-gallery #park-gallery .posts .get-here{
+		padding: 6%  0%;
+		background-color: unset;
+		border-top: solid;
+	}
+	.page-gallery #park-gallery .posts .get-here img{
+		width: 20%;
+		margin: 0%;
+	}
+	
+
+	.page-gallery #page-header .banner-title #search-list{
+		background-color: #c9c9c9b4;
+		width: 80%;
+		padding: 1% 0% 1% 5%;
+		/* padding-left: 5%; */
+		margin-left: 10%;
+	}
+
+	.page-gallery #page-header .banner-title #search-list p{
+		padding: 1% 0%;
+		color: black;
+		font-size: 1.5em;
+	}
+
+	.page-gallery #page-header .banner-title .hidden{
+		display: none;
+	}
+
+	.page-gallery #page-header .banner-title .shown{
+		display: block;
+	}
+	
 
 
 
