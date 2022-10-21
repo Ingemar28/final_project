@@ -8,6 +8,8 @@
 	--title-font: Georgia, 'Times New Roman', Times, serif;
 	--button-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	--description-font: Cambria, Cochin, Georgia, Times, 'Times New Roman';
+    --starGo-blue: rgb(144, 153, 243);
+    --starGo-yellow: rgb(236, 223, 152);
 }
 
 html {
@@ -125,6 +127,10 @@ header {
 	letter-spacing: 1px;
 }
 
+/* #popular-photos span:first-of-type:first-letter {
+    color: var(--starGo-blue);
+} */
+
 #popular-photos div .full-posts {
     display: block;
     position: relative;
@@ -181,13 +187,15 @@ header {
 
 #popular-photos .btn {
 	width: 120px;
-	color: rgb(0, 0, 0);
+	color: var(--starGo-blue);
 	font-size: 14px;
 	cursor: pointer;
 	font-family: var(--button-font);
 	/* transition: 0.5s; */
 	letter-spacing: 1px;
 	text-decoration: none;
+    position: absolute;
+    right: 5%;
 }
 
 /* find park page */
@@ -248,13 +256,15 @@ header {
 
 #popular-parks .btn {
 	width: 120px;
-	color: rgb(0, 0, 0);
+	color: var(--starGo-blue);
 	font-size: 14px;
 	cursor: pointer;
 	font-family: var(--button-font);
 	/* transition: 0.5s; */
 	letter-spacing: 1px;
 	text-decoration: none;
+    position: absolute;
+    right: 5%;
 }
   
 /* #features .category-brief .btn:hover {
