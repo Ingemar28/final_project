@@ -330,7 +330,7 @@ header {
 }
 
 #upload-photos h2 {
-	font-family: var(--title-font);
+	font-family: var(--stargo-font);
 	letter-spacing: 1px;
     padding-right: 20px;
 }
