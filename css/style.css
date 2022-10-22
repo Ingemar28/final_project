@@ -428,7 +428,7 @@ header {
 }
 
 #upload-photos p {
-	font-family: var(--button-font);
+	font-family: var(--stargo-font);
     font-size: 18px;
     letter-spacing: 1px;
     position: absolute;
