@@ -252,6 +252,7 @@ header {
 	font-family: var(--stargo-font);
 	letter-spacing: 1px;
     padding-right: 20px;
+    font-size: 36px;
 }
 
 #popular-parks h2:first-child::first-letter {
@@ -326,6 +327,78 @@ header {
     right: 5%;
 }
 
+/* Search bar */
+
+#search-star {
+	margin: 5% 5%;
+}
+
+#search-star .title {
+    padding: 5% 2% 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#search-star h2 {
+	font-family: var(--stargo-font);
+	letter-spacing: 1px;
+    padding-right: 20px;
+    font-size: 36px;
+}
+
+#search-star h2:first-child::first-letter {
+    color: var(--starGo-blue);
+}
+
+#search-star h2:nth-child(2)::first-letter {
+    color: var(--starGo-yellow);
+}
+
+#search-star p {
+	font-family: var(--stargo-font);
+    font-size: 18px;
+    letter-spacing: 1px;
+    position: absolute;
+    right:5%;
+}
+
+#search-bar {
+    display: flex;
+    padding: 5% 0;
+    justify-content: space-between;
+    font-family: var(--button-font);
+    letter-spacing: 1px;
+}
+
+#search-bar select {
+    border: none;
+    border-bottom: black solid;
+    padding: 5px 5px;
+}
+
+#search-bar input {
+    border: none;
+    border-bottom: black solid;
+    padding: 5px 5px;
+}
+
+#search-bar button {
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    background-color: var(--starGo-blue);
+    color: white;
+    padding: 5px 5px;
+}
+
+#search-result {
+    height: 200px;
+    border: black solid;
+}
+
 /* Upload Photo */
 
 #upload-photos {
@@ -343,6 +416,7 @@ header {
 	font-family: var(--stargo-font);
 	letter-spacing: 1px;
     padding-right: 20px;
+    font-size: 36px;
 }
 
 #upload-photos h2:first-child::first-letter {
