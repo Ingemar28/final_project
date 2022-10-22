@@ -610,7 +610,7 @@ header {
 	/* Footer */
 	
 	#page-footer {
-        padding: 5%;
+        padding: 38px;
 		display: flex;
 		justify-content: space-between;
 		/* align-items: center; */
@@ -824,7 +824,7 @@ header {
     
     #upload-photos .upload-function {
         display: flex;
-        padding: 5% 0;
+        padding-top: 3%;
     }
 
     #upload-photos .upload-function .description {
@@ -877,6 +877,7 @@ header {
         background-color: var(--starGo-blue);
         border: none;
         color: #ffffff;
+        cursor: pointer;
         /* justify-content: space-around; */
         /* margin: 5%; */
     }
@@ -917,7 +918,8 @@ header {
         background-color: var(--starGo-blue);
         border: none;
         color: #ffffff;
-        margin: 54px 30px;
+        margin: 48px 30px;
+        cursor: pointer;
     }
 
 
