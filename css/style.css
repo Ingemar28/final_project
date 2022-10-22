@@ -485,6 +485,7 @@ header {
 	background-position: center center;
 	text-align: center;
     color: #ffffff;
+    font-family: var(--button-font);
 }
 
 #secondary-menu {
