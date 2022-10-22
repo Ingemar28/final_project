@@ -24,11 +24,12 @@ body {
 /* Main menu */
 
 #main-menu {
-	background-color: rgb(0, 0, 0, 80%);
-	position: fixed;
+	/* background-color: rgb(0, 0, 0, 80%); */
+	position: absolute;
 	width: 100%;
 	z-index: 99;
     text-align: center;
+    float: top;
 	/* display: flex; */
 }
 
@@ -40,8 +41,7 @@ body {
 #main-menu a {
 	display: block;
 	text-decoration: None;
-	padding: 5px 0;
-	transition: 0.5s;
+	padding: 10px 0;
 	font-family: var(--button-font);
 	font-size: 14px;
 	letter-spacing: 1px;
@@ -49,14 +49,14 @@ body {
 }
 
 #main-menu a:hover{
-	background-color: rgb(255, 255, 255);
-	color: rgb(0, 0, 0);
+    border-bottom: #ffffff solid;
 }
 
 #main-menu .current a {
-	padding: 10px 0;
-	background-color: rgb(255, 255, 255);
-	color: black;
+	/* padding: 10px 0; */
+	/* background-color: rgb(255, 255, 255); */
+	/* color: black; */
+    border-bottom: #ffffff solid;
 }
 
 /* Header */
@@ -109,7 +109,7 @@ header {
 #page-header .banner-title p {
 	padding: 5% 10%;
 	font-family: var(--stargo-font);
-    font-size: 20px;
+    font-size: 16px;
 	letter-spacing: 1px;
 	line-height: 30px;
 }
@@ -121,7 +121,7 @@ header {
 }
 
 #popular-photos .title {
-    padding: 5% 2% 0 0;
+    padding: 0 2% 0 0;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -132,6 +132,7 @@ header {
 	font-family: var(--stargo-font);
 	letter-spacing: 1px;
     padding-right: 20px;
+    font-size: 36px;
 }
 
 #popular-photos h2:first-child::first-letter , #park-gallery h2:first-child::first-letter{
@@ -362,39 +363,110 @@ header {
 
 /* Page-Mission */
 
+.page-mission #popular-photos {
+    margin: 4% 5%;
+    /* padding: 0; */
+}
+
+.page-mission #popular-photos h3 {
+    padding: 20px 0;
+    font-family: var(--stargo-font);
+    /* text-align: center; */
+}
+
+.page-mission #popular-photos p {
+    font-family: var(--stargo-font);
+    /* text-align: center; */
+}
+
 #limited-mission {
     display: block;
     text-align: center;
-    padding: 5% 0;
+    /* padding: 5% 0; */
+    font-family: var(--button-font);
 }
 
 #limited-mission h2 {
-    padding: 10px;
+    padding: 40px 0;
+    text-align: center;
+    font-family: var(--stargo-font);
+}
+
+#requirement-title::first-letter {
+    color: var(--starGo-blue);
+}
+
+#reward-title::first-letter {
+    color: var(--starGo-yellow);
 }
 
 #limited-mission .mission-description {
-    border-radius: 10px;
-    border: solid rgb(179, 179, 179);
+    border-radius: 30px;
+    border: solid rgb(0, 0, 0) 0.5px;
+    box-shadow: grey 1px 1px 5px;
     font-size: 20px;
-    padding: 5%;
+    padding: 0 5% 5%;
     margin: 0 5%;
     margin-bottom: 3%;
-    text-align: left;
+    text-align: center;
+    overflow: hidden;
+}
+/* 
+#limited-mission .mission-description div:first-child {
+    height: 50px;
+    background-color: black;
+    float: top;
+} */
+
+#requirements {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 100px;
 }
 
-#limited-mission .btn {
-    width: 120px;
-	color: rgb(0, 0, 0);
-	font-size: 18px;
-    padding: 5px 20px;
-    margin: 5px;
-	cursor: pointer;
-	font-family: var(--button-font);
-	text-decoration: none;
-    border: solid rgb(179, 179, 179);
-    border-radius: 30px;
-    /* position: relative;
-    left: 35%; */
+#requirements > div {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    /* flex-direction: column; */
+}
+
+#requirements .button {
+    width: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#requirements .button .btn {
+    width: 200px;
+    height: 40px;
+    /* display: flex; */
+    /* align-items: center; */
+    background-color: var(--starGo-blue);
+    border: none;
+    color: #ffffff;
+    /* margin: 48px 30px; */
+    cursor: pointer;
+    /* position: absolute; */
+}
+
+#requirements b {
+    width: 20%;
+}
+
+#requirements p {
+    width: 80%;
+}
+
+#requirements b+p {
+    /* width: 100%; */
+    display: inline;
+    /* margin-bottom: 10px; */
 }
 
 #common-mission {
@@ -402,57 +474,92 @@ header {
     padding: 5%;
 }
 
+#common-mission .title {
+    display: flex;
+}
+
+#common-mission .title h2 {
+	font-family: var(--stargo-font);
+	letter-spacing: 1px;
+    padding-right: 20px;
+    font-size: 36px;
+    padding-bottom: 3%;
+}
+
+#common-mission h2:first-child::first-letter {
+    color: var(--starGo-blue);
+}
+
+#common-mission h2:nth-child(2)::first-letter {
+    color: var(--starGo-yellow);
+}
+
+#common-mission p {
+    font-size: 16px;
+    font-family: var(--stargo-font);
+    text-align: left;
+}
+
+#mission-board {
+    display: flex;
+    padding: 3% 0;
+    justify-content: space-between;
+}
+
+#mission-board .posts {
+    width: 30%;
+    border-radius: 30px;
+    border: solid rgb(0, 0, 0) 0.5px;
+    box-shadow: grey 1px 1px 5px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#common-mission .posts h1 {
+    font-family: var(--button-font);
+    font-size: 40px;
+    padding: 3%;
+}
+
+#common-mission .posts p {
+    text-align: center;
+    padding-bottom: 15%;
+}
+
 #common-mission .mission-photos {
     overflow: hidden;
-    width: 250px;
+    width: 70%;
     height: 250px;
-    position: relative;
     border-radius: 30px;
-    /* justify-content: center; */
-    margin: 2%;
+    margin-bottom: 30px;
 }
 
 #common-mission .mission-photos img {
-    /* width: 300px; */
+    width: 100%;
     object-fit: cover;
     flex-shrink: 0;
     height: 100%;
-	/* width: 100%; */
-    position: absolute;
-    top: -9999px;
-    bottom: -9999px;
-    left: -9999px;
-    right: -9999px;
-    margin: auto;
 }
 
-#common-mission .common-description {
-    padding: 20px;
+#mission-board .button {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
 }
 
-#common-mission .common-description h2 {
-    padding: 10px;
-}
-
-#common-mission .common-description .mission-description {
-    border: solid rgb(179, 179, 179);
-    border-radius: 30px;
-    padding: 40px 20px;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-#common-mission .common-description .btn {
-    width: 120px;
-	color: rgb(0, 0, 0);
-	font-size: 18px;
-    padding: 5px 20px;
-    margin: 5px;
-	cursor: pointer;
-	font-family: var(--button-font);
-	text-decoration: none;
-    border: solid rgb(179, 179, 179);
-    border-radius: 30px;
+#mission-board .button .btn {
+    width: 100px;
+    height: 30px;
+    background-color: var(--starGo-blue);
+    border: none;
+    color: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    top: 15px
 }
 
 #customize-mission {
@@ -461,20 +568,20 @@ header {
 }
 
 #customize-mission h2 {
-    margin-bottom: 20px;
+    font-family: var(--stargo-font);
+    margin-bottom: 50px;
+    font-size: 30px;
 }
 
 #customize-mission .btn {
-    /* width: 120px; */
-	color: rgb(0, 0, 0);
-	font-size: 20px;
+	color: rgb(255, 255, 255);
+	font-size: 26px;
     padding: 10px 20px;
     margin: 10px;
 	cursor: pointer;
-	font-family: var(--button-font);
+	font-family: var(--stargo-font);
 	text-decoration: none;
-    border: solid rgb(179, 179, 179);
-    border-radius: 30px;
+    background-color: var(--starGo-blue);
 }
 
 /* Footer */
@@ -486,6 +593,7 @@ header {
 	text-align: center;
     color: #ffffff;
     font-family: var(--button-font);
+    letter-spacing: 1px;
 }
 
 #secondary-menu {
@@ -520,15 +628,7 @@ header {
 	}
 
 	#main-menu a {
-		padding: 0 10px;
-	}
-
-	#main-menu .current a {
-		padding: 10px;
-	}
-
-	#main-menu a:hover{
-		padding: 10px 20px;
+		margin: 0 10px;
 	}
 
     /* Page header */
@@ -538,7 +638,7 @@ header {
     }
 
     #page-header .banner-title p {
-        font-size: 30px;
+        font-size: 20px;
     }
 
 	/* popular-photos */	
@@ -572,41 +672,6 @@ header {
 	#popular-parks .posts .description {
 		font-size: 20px;
 	}
-
-    /*  mission page */
-
-    #limited-mission .btn {
-        position: relative;
-        left: 25%;
-    }
-
-    #common-mission {
-        display: flex;
-        /* justify-content: space-between; */
-    }
-
-    #common-mission .mission-photos {
-        width: 24%;
-        height: 200px;
-    }
-
-    #common-mission .common-description {
-        width: 50%;
-        text-align: left;
-        /* padding: 20px 0; */
-    }
-
-    #common-mission .common-description .btn {
-        position: relative;
-        left: 25%;
-    }
-
-    #customize-mission {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
 
 	/* Footer */
 	
@@ -991,15 +1056,7 @@ header {
 	#main-menu a {
 		font-size: 1em;
 		letter-spacing: 1px;
-		padding: 10px 40px;
-	}
-
-	#main-menu .current a {
-		padding: 10px 40px;
-	}
-
-	#main-menu a:hover{
-		padding: 10px 60px;
+		margin: 10px 40px;
 	}
 
 	#page-header p {
