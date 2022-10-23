@@ -1,21 +1,11 @@
-document.addEventListener("readystatechange", function(event) {
-	if(event.target.readyState == "interactive") {
-        document.getElementById("traingle-icon").addEventListener("click", traingle_icon);
-
-        function traingle_icon() {
-            let element_1 = document.getElementById("search-box");
-            element_1.classList.toggle("shown");
-            element_1.classList.toggle("hidden");
-            let element_2 = document.getElementById("search-list");
-            element_2.classList.toggle("hidden");
-            element_2.classList.toggle("shown");
-        }
-
-
-		
-	}
-
-});
+function traingle_icon() {
+    let element_1 = document.getElementById("search-box");
+    element_1.classList.toggle("shown");
+    element_1.classList.toggle("hidden");
+    let element_2 = document.getElementById("search-list");
+    element_2.classList.toggle("hidden");
+    element_2.classList.toggle("shown");
+}
 
 function star(num){
     let element = document.querySelector(".collect")
@@ -53,6 +43,20 @@ function star(num){
     });
 
     document.getElementById("star-" + num).classList.toggle("selected");
+}
 
+function moon_ajax_js(){
+    // Create an XMLHttpRequest object
+    const xhttp = new XMLHttpRequest();
+    console.log(document.getElementById("time").value)
+    // Define a callback function
+    xhttp.onload = function() {
+        console.log(this.responseText);
+        document.getElementById("moon-phase").src = this.responseText;
+    }
+
+    // Send a request
+    xhttp.open("GET", "phpController.php?js=true&funname=load_moon()&date=" + document.getElementById("time").value);
+    xhttp.send();
 
 }
