@@ -27,7 +27,7 @@
             
             <ul>
 				<li class="current">
-					<a href="index.html">Home</a>
+					<a href="index.php">Home</a>
 				</li>
 				<li>
 					<a href="find_park.html">Find Park</a>
@@ -262,15 +262,34 @@
                     <label for="locations">Location: </label>
     
                     <select name="location" id="location">
-                      <!-- <option value="Paris">Paris, French</option>
-                      <option value="Rome">Rome, Italy</option>
-                      <option value="Tokyo">Tokyo, Japan</option>
-                      <option value="London">London, UK</option>
-                      <option value="Kobenhavn">København, Denmark</option>
-                      <option value="Agra">Agra, India</option>
-                      <option value="Lofoten">Lofoten, Norway</option>
-                      <option value="Brisbane">Brisbane, Australia</option>
-                      <option value="New York">New York, USA</option> -->
+                        <?php
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = "root";
+                            $dbname = "park";
+
+                            // Create connection
+                            $conn = new mysqli($servername, $username, $password, $dbname);
+                            // Check connection
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
+
+                            $sql = "SELECT parkName FROM park WHERE id <= 10";
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                                // output data of each row
+                                while($row = $result->fetch_assoc()) {
+                                    echo "<option value='". $row["parkName"]. "'>". $row["parkName"]. "</option>";
+                                }
+                            } else {
+                                echo "0 results";
+                            }
+
+                            $conn->close();
+                        ?>
+
                     </select>
     
                 </form>
@@ -428,11 +447,15 @@
                 </div>
                 
                 <div>
-                    
+
                     <div id="photo-preview">
                         
-                        <img src="images/insert-picture-icon.png" alt="picture icon">
-                        
+                        <input id="file-input" type="file" onchange="preview()">
+
+                        <label for="file-input">
+                            <img id="blah" src="images/insert-picture-icon.png" alt="picture icon">
+                        </label>
+
                     </div>
                     
                     <button class="submit">Submit</button>
@@ -497,6 +520,8 @@
 			</nav>
 
 		</footer>
+
+        <script src="js/script.js"></script>
         
         <script src="js/script.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>

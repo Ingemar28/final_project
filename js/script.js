@@ -60,3 +60,8 @@ function moon_ajax_js(){
     xhttp.send();
 
 }
+
+function preview() {
+    blah.src=URL.createObjectURL(event.target.files[0]);
+    blah.id="preview-photo"
+}
