@@ -264,8 +264,8 @@
                     <select name="location" id="location">
                         <?php
                             $servername = "localhost";
-                            $username = "root";
-                            $password = "root";
+                            $username = "orcus";
+                            $password = "deco18007180";
                             $dbname = "park";
 
                             // Create connection
