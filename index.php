@@ -27,7 +27,7 @@
             
             <ul>
 				<li class="current">
-					<a href="index.html">Home</a>
+					<a href="index.php">Home</a>
 				</li>
 				<li>
 					<a href="find_park.html">Find Park</a>
@@ -275,7 +275,7 @@
                                 die("Connection failed: " . $conn->connect_error);
                             }
 
-                            $sql = "SELECT parkName FROM park";
+                            $sql = "SELECT parkName FROM park WHERE id <= 10";
                             $result = $conn->query($sql);
 
                             if ($result->num_rows > 0) {
@@ -289,15 +289,7 @@
 
                             $conn->close();
                         ?>
-                      <!-- <option value="Paris">Paris, French</option>
-                      <option value="Rome">Rome, Italy</option>
-                      <option value="Tokyo">Tokyo, Japan</option>
-                      <option value="London">London, UK</option>
-                      <option value="Kobenhavn">København, Denmark</option>
-                      <option value="Agra">Agra, India</option>
-                      <option value="Lofoten">Lofoten, Norway</option>
-                      <option value="Brisbane">Brisbane, Australia</option>
-                      <option value="New York">New York, USA</option> -->
+
                     </select>
     
                 </form>
@@ -505,11 +497,15 @@
                 </div>
                 
                 <div>
-                    
+
                     <div id="photo-preview">
                         
-                        <img src="images/insert-picture-icon.png" alt="picture icon">
-                        
+                        <input id="file-input" type="file" onchange="preview()">
+
+                        <label for="file-input">
+                            <img id="blah" src="images/insert-picture-icon.png" alt="picture icon">
+                        </label>
+
                     </div>
                     
                     <button class="submit">Submit</button>
@@ -574,6 +570,8 @@
 			</nav>
 
 		</footer>
+
+        <script src="js/script.js"></script>
         
     </body>
 

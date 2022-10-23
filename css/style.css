@@ -1074,6 +1074,29 @@ header {
         margin: 0 10%;
         text-align: center;
         height: 210px;
+        cursor: pointer;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #photo-preview>input {
+        display: none;
+        z-index: 2;
+    }
+
+    #photo-preview div {
+        width: 100%;
+    }
+
+    #photo-preview #preview-photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+        width: 300px;
+        padding: 0;
     }
 
     #photo-preview img {
@@ -1082,7 +1105,8 @@ header {
         box-sizing: border-box;
         padding: 10%;
         position: relative;
-        top: 25%
+        top: 25%;
+        cursor: pointer;
         /* left: 50%; */
     }
 

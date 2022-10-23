@@ -11,6 +11,8 @@ document.addEventListener("readystatechange", function(event) {
             element_2.classList.toggle("shown");
         }
 
+        
+
 
 		
 	}
@@ -55,4 +57,9 @@ function star(num){
     document.getElementById("star-" + num).classList.toggle("selected");
 
 
+}
+
+function preview() {
+    blah.src=URL.createObjectURL(event.target.files[0]);
+    blah.id="preview-photo"
 }
