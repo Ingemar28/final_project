@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 
 <html lang="en">
@@ -260,7 +262,34 @@
                     <label for="locations">Location: </label>
     
                     <select name="location" id="location">
-                      <option value="Paris">Paris, French</option>
+                        <?php
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = "root";
+                            $dbname = "park";
+
+                            // Create connection
+                            $conn = new mysqli($servername, $username, $password, $dbname);
+                            // Check connection
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
+
+                            $sql = "SELECT parkName FROM park";
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                                // output data of each row
+                                while($row = $result->fetch_assoc()) {
+                                    echo "<option value='". $row["parkName"]. "'>". $row["parkName"]. "</option>";
+                                }
+                            } else {
+                                echo "0 results";
+                            }
+
+                            $conn->close();
+                        ?>
+                      <!-- <option value="Paris">Paris, French</option>
                       <option value="Rome">Rome, Italy</option>
                       <option value="Tokyo">Tokyo, Japan</option>
                       <option value="London">London, UK</option>
@@ -268,11 +297,11 @@
                       <option value="Agra">Agra, India</option>
                       <option value="Lofoten">Lofoten, Norway</option>
                       <option value="Brisbane">Brisbane, Australia</option>
-                      <option value="New York">New York, USA</option>
+                      <option value="New York">New York, USA</option> -->
                     </select>
     
                 </form>
-
+<!-- 
                 <form class="star" action="">
     
                     <label for="star">Star: </label>
@@ -289,12 +318,16 @@
                       <option value="New York">New York, USA</option>
                     </select>
     
-                </form>
+                </form> -->
 
                 <form class="time" action="">
 
                     <label for="time">Time: </label>
-                    <input type="datetime-local" id="time" name="time">
+                    <?php
+                        date_default_timezone_set('Australia/Brisbane');
+                        echo "<input type='datetime-local' id='time' name='time' value='" .date('Y-m-d H:i'). "'>";
+                    ?>
+                    <!-- <input type="datetime-local" id="time" name="time"> -->
                 
                 </form>
 
