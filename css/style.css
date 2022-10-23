@@ -399,7 +399,16 @@ header {
     /* border: black solid; */
     display: flex;
     align-items: center;
+	width: 100%;
 }
+
+/* #search-result .result:first-child {
+	width: 20%;
+}
+
+#search-result .result:nth-child(2) {
+	width: 80%;
+} */
 
 #search-result .result {
     height: 100%;
@@ -411,6 +420,7 @@ header {
     width: 85%;
     display: flex;
     align-items: center;
+	overflow: scroll;
 }
 
 #search-result .result img {
