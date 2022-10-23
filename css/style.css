@@ -395,8 +395,34 @@ header {
 }
 
 #search-result {
-    height: 200px;
-    border: black solid;
+    height: 260px;
+    /* border: black solid; */
+    display: flex;
+    align-items: center;
+}
+
+#search-result .result {
+    height: 100%;
+    width: 20%;
+    overflow: hidden;
+}
+
+#search-result .result:nth-child(2) {
+    width: 85%;
+    display: flex;
+    align-items: center;
+}
+
+#search-result .result img {
+    object-fit: contain;
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+.result #starchart {
+    /* height: 100%; */
+    width: 100%;
+    object-fit: cover;
 }
 
 /* Upload Photo */
