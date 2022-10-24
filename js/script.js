@@ -61,6 +61,22 @@ function moon_ajax_js(){
 
 }
 
+function star_ajax_js(){
+    // Create an XMLHttpRequest object
+    const xhttp = new XMLHttpRequest();
+    console.log(document.getElementById("time").value)
+    // Define a callback function
+    xhttp.onload = function() {
+        console.log(this.responseText);
+        document.getElementById("starchart").src = this.responseText;
+    }
+
+    // Send a request
+    xhttp.open("GET", "phpController.php?js=true&funname=load_star()&date=" + document.getElementById("time").value);
+    xhttp.send();
+
+}
+
 function preview() {
     blah.src=URL.createObjectURL(event.target.files[0]);
     blah.id="preview-photo"
