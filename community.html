@@ -1,192 +1,283 @@
-<!DOCTYPE html>
+
+
+<!doctype html>
+
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+
+    <head>
+
+        <meta charset="utf-8">
         <meta name="description" content="UQ assignment">
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="Hsing-Yu Chen">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>StarGo</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
-        <link rel="icon" href="./images/anywhere.ico">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="page-mission">
-
-    <nav id="main-menu">
-
-        <a href="login.html">Login</a>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="find_park.html">Find Park</a>
-            </li>
-            <li>
-                <a href="mission.html">Mission Board</a>
-            </li>
-            <li class="current">
-                <a href="community.html">Community</a>
-            </li>
-        </ul>
+    </head>
 
-    </nav>
+    <body class="page-home page-community">
 
-    <header id="page-header">
+        <nav id="main-menu">
 
-        <section class="banner-title">
+            <a href="login.html">Login</a>
+            
+            <ul>
+				<li >
+					<a href="index.php">Home</a>
+				</li>
+				<li>
+					<a href="find_park.html">Find Park</a>
+				</li>
+				<li>
+					<a href="mission.html">Mission Board</a>
+				</li>
+                <li class="current">
+					<a href="community.html">Community</a>
+				</li>
+			</ul>
 
-            <div class="logo-title">
+		</nav>
 
-    
-                
-                <h1>Community</h1>
+        <header id="page-header">
 
+			<section class="banner-title">
+
+                <div class="logo-title">
+                    
+                    <h1>Community</h1>
+
+                </div>
+
+                <p>
+                    It's time to go for Star Go and relax.
+                </p>
+
+			</section>
+
+		</header>
+
+        <section id="user-comments">
+
+            <img class="icons" src="images/user.png" alt="user avatar icon">
+
+            <div class="view-comments">
+                <p>User 001</p>
+                <p>I love city parks!</p>
             </div>
 
-            <p>
-                It's time to go for Star Go and relax
-            </p>
+            <div>
+                <img src="images/shootingstar.JPEG" alt="shooting star">
+                <img src="images/foreststars.JPEG" alt="forest stars">
+
+                <div id="comment-icons">
+                    <img src="images/chat2.png" alt="chat box icon">
+                    <img src="images/heart.png" alt="heart icon">
+                    <img src="images/share.png" alt="share link icon">
+                </div>
+                
+            </div>
 
         </section>
 
-    </header>
+        <section id="user-comments">
 
+            <img class="icons" src="images/user.png" alt="user avatar icon">
+
+            <div class="view-comments">
+                <p>User 002</p>
+                <p>Where can I capture such a starry sky?</p>
+            </div>
+
+            <div>
+                <img src="images/purplestars.JPEG" alt="shooting star">
+                <img src="images/supri-yanto-Xv68_SoCoaU-unsplash.jpg" alt="forest stars">
+
+                <div id="comment-icons">
+                    <img src="images/chat2.png" alt="chat box icon">
+                    <img src="images/heart.png" alt="heart icon">
+                    <img src="images/share.png" alt="share link icon">
+                </div>
+                
+            </div>
+
+        </section>
+
+        <section id="user-comments">
+
+            <img class="icons" src="images/user.png" alt="user avatar icon">
+
+            <div class="view-comments">
+                <p>User 003</p>
+                <p>Mountain park is gorgeous!</p>
+            </div>
+
+            <div>
+                <img src="images/rockandstars.JPEG" alt="shooting star">
+                <img src="images/nate-rayfield-_WR6tUIAJe8-unsplash.jpg" alt="forest stars">
+
+                <div id="comment-icons">
+                    <img src="images/chat2.png" alt="chat box icon">
+                    <img src="images/heart.png" alt="heart icon">
+                    <img src="images/share.png" alt="share link icon">
+                </div>
+                
+            </div>
+
+        </section>
+
+        <section id="user-comments">
+
+            <img class="icons" src="images/user.png" alt="user avatar icon">
+
+            <div class="view-comments">
+                <p>User 004</p>
+                <p>Any friends what to go stargazing on the beach together?</p>
+            </div>
+
+            <div>
+                <img src="images/hu-chen--ibpQdaorT8-unsplash.jpg" alt="shooting star">
+                <img src="images/reign-abarintos--cKXtsJWU-I-unsplash.jpg" alt="forest stars">
+
+                <div id="comment-icons">
+                    <img src="images/chat2.png" alt="chat box icon">
+                    <img src="images/heart.png" alt="heart icon">
+                    <img src="images/share.png" alt="share link icon">
+                </div>
+                
+            </div>
+
+        </section>
+
+
+        <section id="upload-photos">
+
+            <div class="title">
+
+                <h2>New</h2>
+
+                <h2>Posts</h2>
     
+                <p>Upload your first star photographs here.</p>
 
-    
-    
-    <section id="user-comment">
+            </div>
 
-        
+            <article class="upload-function">
 
-        
+                <div class="description">
 
-            <h2>User 1</h2>
+                    <div id="user-info">
 
-            
+                        <figure class="profile">
 
-            <p>I love city parks!</p>
-            <div class="popup" onclick="myFunction()"> 
-        
-                <a class="btn" >Comment</a>
+                            <img src="images/profile.png" alt="user profile">
+
+                            <h3>User Name</h3>
+
+                        </figure>
+
+                        <form>
+                            <textarea>Some text...</textarea>
+                        </form>
+
+                    </div>
+
+                    <div id="select-button">
+
+                        <img src="images/logo.png" alt="star go">
+
+                        <button onclick="location.href='find_park.html'"><i class="material-icons">place</i>Select Location</button>
+
+                        <button onclick="location.href='mission.html'"><i class="material-icons">star</i>Select Mission</button>
+
+                    </div>
+
                     
-            <span class="popuptext" id="myPopup">
-                 <h2>Add Comment</h2>
-                 <div class="title">
-                            <input type="text" id="new-post-title" placeholder="Comment here">
                 </div>
-                <div class="button">
-                    <a class="btn" href="">Add Comment</a>
+                
+                <div>
+
+                    <div id="photo-preview">
+                        
+                        <input id="file-input" type="file" onchange="preview()">
+
+                        <label for="file-input">
+                            <img id="blah" src="images/insert-picture-icon.png" alt="picture icon">
+                        </label>
+
+                    </div>
+                    
+                    <button class="submit">Submit</button>
+                    
                 </div>
-            </span>
-            </div>
-                
-                <a class="btn" href="">Like</a>
-                <a class="btn" href="">Share</a>
 
-                
-           
-
-            <div class="mission-photos">
-
-                <img src="images/galaxy.jpg" alt="galaxy">
-                <img src="images/fullmoon.JPEG" alt="full moon">
-    
-            </div>
-    
-            <!-- popup -->
-
-    
-      
-    <script>
-        // When the user clicks on div, open the popup
-        function myFunction() {
-          var popup = document.getElementById("myPopup");
-          popup.classList.toggle("show");
-        }
-    </script>
-
+            </article>
             
-        <!-- </div> -->
+            <img id="bottom-decorate" src="images/bottomstars" alt="bottom star">
+        
+        </section>
 
-    </section>
-    
-    
+        <footer id="page-footer">
 
-    <section id ="new-post">
-        <h2>New Post</h2>
-        <div class="title"></div>
-            <input type="text" id="new-post-title" placeholder="Title">
-        </div>
-        <div class="title"></div>
-            <input type="text" id="new-post-write" placeholder="Write Something">
-        </div>
-        <div class="button">
-            <a class="btn" href="">Upload Photos</a>
-            <a class="btn" href="">Submit</a>
-        </div>
+            <div id="logo-name">
 
-    </section>
-
-
-    
-
-    <footer id="page-footer">
-
-        <div id="logo-name">
-
-            <h1>Star Go</h1>
-
-        </div>
-
-        <div id="made-by">
-
-            <h2>Made By</h2>
-
-            <div id="students-names">
-                <p>Lin</p>
-                <p>Jerry</p>
-                <p>Ansley</p>
-                <p>Solar</p>
-                <p>Thisura</p>
-            </div>
-
-        </div>
-
-        <div id="contact-us">
-
-            <h2>Contact Us</h2>
-
-            <div id="contact-information">
-
-                <h3>Mailbox</h3>
-
-                <p>solarpark1226@gmail.com</p>
-
-                <h3>Phone</h3>
-
-                <p>0412345678</p>
+                <h1>Star Go</h1>
 
             </div>
 
-        </div>
+            <div id="made-by">
 
-        <nav id="social-media">
+                <h2>Made By</h2>
 
-            <ul>
+                <div id="students-names">
+                    <p>Lin</p>
+                    <p>Jerry</p>
+                    <p>Ansley</p>
+                    <p>Solar</p>
+                </div>
 
-                <li>
-                    <a href=""></a>
-                </li>
+            </div>
 
-            </ul>
+            <div id="contact-us">
 
-        </nav>
+                <h2>Contact Us</h2>
 
-    </footer>
-    
-</body>
+                <div id="contact-information">
+
+                    <h3>Mailbox</h3>
+
+                    <p>solarpark1226@gmail.com</p>
+
+                    <h3>Phone</h3>
+
+                    <p>0412345678</p>
+
+                </div>
+
+            </div>
+
+			<nav id="social-media">
+
+				<ul>
+
+					<li>
+						<a href=""></a>
+					</li>
+
+				</ul>
+
+			</nav>
+
+		</footer>
+
+        <script src="js/script.js"></script>
+        
+        <script src="js/script.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+    </body>
+
 </html>

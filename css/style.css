@@ -775,7 +775,66 @@ position: relative;
     border-style: solid;
     border-color: #dedede;
 }
-  
+
+/* community page */
+.page-community section{
+    border-top: black 1px solid;
+}
+.page-community #user-comments{
+    display: flex;
+    justify-content: space-between;
+    margin: 3% 5%;
+}
+.page-community #user-comments img{
+    width: 40%;
+    height: 60%;
+    margin: 5%;
+    border-radius: 30px;
+}
+.page-community #user-comments .icons{
+    width: 5%;
+    height: 5%;
+    margin: 5% 5% 0% 0% ;
+}
+.page-community #user-comments .view-comments{
+    flex-direction: column;
+    width: 40%;
+    margin: 5% 0% 0% 0% ;
+}
+.page-community #user-comments .view-comments p:first-child{
+    border: rgb(193, 193, 193) 1px solid;
+    border-radius: 15px;
+    width: 20%;
+    text-align: center;
+    margin: 3% 0% 5% 0%;
+}
+.page-community #user-comments .view-comments p:nth-child(2){
+    border: rgb(193, 193, 193) 1px solid;
+    border-radius: 30px;
+    width: 80%;
+    height: 30%;
+    text-align: left;
+    padding: 3% 0% 0% 5%;
+}
+.page-community #user-comments div:nth-child(3){
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+.page-community #user-comments #comment-icons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-left: 60%;
+    padding: 0%;
+    width: 20%;
+}
+.page-community #user-comments #comment-icons img{
+    border-radius: 0px;
+    margin: 0% 10%;
+}
+
+
   
   
 /* Toggle this class - hide and show the popup */
