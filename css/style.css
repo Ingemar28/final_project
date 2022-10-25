@@ -1114,6 +1114,7 @@ position: relative;
 		display:-webkit-inline-box;
 		padding: 2% 0%;
 		overflow: scroll;
+        width: 110%;
         /* justify-content: space-between; */
     }
 	
@@ -1121,11 +1122,21 @@ position: relative;
 		display: flex;
 		flex-direction: column;
 		width: 25%;
+        height: 600px;
 		border-radius: 10px;
 		margin-right: 30px;
 		margin-left: 1%;
+        /* flex-direction: column; */
+        /* justify-content: space-between; */
+        position: relative;
 	}
-	
+
+    .page-find #park-gallery .posts h3,
+    .page-find #park-gallery .posts h4,
+    .page-find #park-gallery .posts p {
+        font-family: var(--stargo-font);
+	}
+
 	.page-find #park-gallery .posts .park-img{
 		width: 80%; 
 		border-radius: 10px;
@@ -1169,7 +1180,9 @@ position: relative;
 		border-radius: 0%;
 	}
 	.page-find #park-gallery .posts .get-here{
-		display: block;
+        position: absolute;
+        bottom: 0;
+		display: block;    
 		text-align: center;
 		margin-top: 10%;
 		padding: 10% 0%;

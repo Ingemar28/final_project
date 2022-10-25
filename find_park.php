@@ -1,3 +1,22 @@
+<?php
+    $servername = "localhost";
+    $username = "orcus";
+    $password = "deco18007180";
+    $dbname = "park";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT * FROM park WHERE id <= 10";
+    $result = $conn->query($sql);
+
+    $conn->close();
+?>
+
 <!doctype html>
 
 <html lang="en">
@@ -131,14 +150,19 @@
             
             
             <div>
+                <?php
+                    while($row = $result->fetch_assoc()) {
+                ?>
+
                 <article class="posts">
                     <a href="gallery.html"><img src="images/leyshonPark.png" alt="Leyshon Park" class="park-img"></a>
                     <div>
-                        <h3>Leyshon Park</h3> 
+                        <h3><?php echo $row["parkName"];?></h3>
                         <h3>4.7</h3>
                     </div>
+
                     <div>
-                        <p>The hill to the south of the park is the clearest spot to photograph Cancer.</p>
+                        <?php echo "<p>Address:<br>". $row["houseNumber"] .", ". $row["streetAddress"] .", ". $row["suburb"] ."<br></p>"?>
                         <br>
                         <h4>Star Collection Progress (3/5)</h4>
                         <span class="fa fa-star checked"></span>
@@ -160,14 +184,19 @@
                             <h4>364</h4>
                         </div>
                     </div>
+
                     <div class="get-here">
                         <h3>Get Here</h3>
                         <p>open in your map</p>
                     </div>
                 </article>
+
+                <?php
+                    }
+                ?>
                 
-                <article class="posts">
-                    
+                <!-- <article class="posts">
+
                     <a href="#"><img src="images/goodwinPark.png" alt="Goodwin Park" class="park-img"></a>
                     <div>
                         <h3>Goodwin Park</h3>
@@ -274,7 +303,7 @@
                         <p>open in your map</p>
                     </div>
                     
-                </article>
+                </article> -->
                 
             </div>
             

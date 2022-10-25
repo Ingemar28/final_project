@@ -1,192 +1,194 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-        <meta name="description" content="UQ assignment">
-        <meta name="keywords" content="HTML, CSS, JavaScript">
-        <meta name="author" content="Hsing-Yu Chen">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>StarGo</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
-        <link rel="icon" href="./images/anywhere.ico">
-        <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="page-mission">
 
-    <nav id="main-menu">
+    <head>
+        <meta charset="utf-8">
+            <meta name="description" content="UQ assignment">
+            <meta name="keywords" content="HTML, CSS, JavaScript">
+            <meta name="author" content="Hsing-Yu Chen">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>StarGo</title>
+            <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+            <link rel="icon" href="./images/anywhere.ico">
+            <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="page-mission">
 
-        <a href="login.html">Login</a>
-        
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="find_park.html">Find Park</a>
-            </li>
-            <li>
-                <a href="mission.html">Mission Board</a>
-            </li>
-            <li class="current">
-                <a href="community.html">Community</a>
-            </li>
-        </ul>
+        <nav id="main-menu">
 
-    </nav>
-
-    <header id="page-header">
-
-        <section class="banner-title">
-
-            <div class="logo-title">
-
-    
-                
-                <h1>Community</h1>
-
-            </div>
-
-            <p>
-                It's time to go for Star Go and relax
-            </p>
-
-        </section>
-
-    </header>
-
-    
-
-    
-    
-    <section id="user-comment">
-
-        
-
-        
-
-            <h2>User 1</h2>
-
+            <a href="login.html">Login</a>
             
-
-            <p>I love city parks!</p>
-            <div class="popup" onclick="myFunction()"> 
-        
-                <a class="btn" >Comment</a>
-                    
-            <span class="popuptext" id="myPopup">
-                 <h2>Add Comment</h2>
-                 <div class="title">
-                            <input type="text" id="new-post-title" placeholder="Comment here">
-                </div>
-                <div class="button">
-                    <a class="btn" href="">Add Comment</a>
-                </div>
-            </span>
-            </div>
-                
-                <a class="btn" href="">Like</a>
-                <a class="btn" href="">Share</a>
-
-                
-           
-
-            <div class="mission-photos">
-
-                <img src="images/galaxy.jpg" alt="galaxy">
-                <img src="images/fullmoon.JPEG" alt="full moon">
-    
-            </div>
-    
-            <!-- popup -->
-
-    
-      
-    <script>
-        // When the user clicks on div, open the popup
-        function myFunction() {
-          var popup = document.getElementById("myPopup");
-          popup.classList.toggle("show");
-        }
-    </script>
-
-            
-        <!-- </div> -->
-
-    </section>
-    
-    
-
-    <section id ="new-post">
-        <h2>New Post</h2>
-        <div class="title"></div>
-            <input type="text" id="new-post-title" placeholder="Title">
-        </div>
-        <div class="title"></div>
-            <input type="text" id="new-post-write" placeholder="Write Something">
-        </div>
-        <div class="button">
-            <a class="btn" href="">Upload Photos</a>
-            <a class="btn" href="">Submit</a>
-        </div>
-
-    </section>
-
-
-    
-
-    <footer id="page-footer">
-
-        <div id="logo-name">
-
-            <h1>Star Go</h1>
-
-        </div>
-
-        <div id="made-by">
-
-            <h2>Made By</h2>
-
-            <div id="students-names">
-                <p>Lin</p>
-                <p>Jerry</p>
-                <p>Ansley</p>
-                <p>Solar</p>
-                <p>Thisura</p>
-            </div>
-
-        </div>
-
-        <div id="contact-us">
-
-            <h2>Contact Us</h2>
-
-            <div id="contact-information">
-
-                <h3>Mailbox</h3>
-
-                <p>solarpark1226@gmail.com</p>
-
-                <h3>Phone</h3>
-
-                <p>0412345678</p>
-
-            </div>
-
-        </div>
-
-        <nav id="social-media">
-
             <ul>
-
                 <li>
-                    <a href=""></a>
+                    <a href="index.html">Home</a>
                 </li>
-
+                <li>
+                    <a href="find_park.php">Find Park</a>
+                </li>
+                <li>
+                    <a href="mission.html">Mission Board</a>
+                </li>
+                <li class="current">
+                    <a href="community.html">Community</a>
+                </li>
             </ul>
 
         </nav>
 
-    </footer>
-    
-</body>
+        <header id="page-header">
+
+            <section class="banner-title">
+
+                <div class="logo-title">
+
+        
+                    
+                    <h1>Community</h1>
+
+                </div>
+
+                <p>
+                    It's time to go for Star Go and relax
+                </p>
+
+            </section>
+
+        </header>
+
+        
+
+        
+        
+        <section id="user-comment">
+
+            
+
+            
+
+                <h2>User 1</h2>
+
+                
+
+                <p>I love city parks!</p>
+                <div class="popup" onclick="myFunction()"> 
+            
+                    <a class="btn" >Comment</a>
+                        
+                <span class="popuptext" id="myPopup">
+                    <h2>Add Comment</h2>
+                    <div class="title">
+                                <input type="text" id="new-post-title" placeholder="Comment here">
+                    </div>
+                    <div class="button">
+                        <a class="btn" href="">Add Comment</a>
+                    </div>
+                </span>
+                </div>
+                    
+                    <a class="btn" href="">Like</a>
+                    <a class="btn" href="">Share</a>
+
+                    
+            
+
+                <div class="mission-photos">
+
+                    <img src="images/galaxy.jpg" alt="galaxy">
+                    <img src="images/fullmoon.JPEG" alt="full moon">
+        
+                </div>
+        
+                <!-- popup -->
+
+        
+        
+        <script>
+            // When the user clicks on div, open the popup
+            function myFunction() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+            }
+        </script>
+
+                
+            <!-- </div> -->
+
+        </section>
+        
+        
+
+        <section id ="new-post">
+            <h2>New Post</h2>
+            <div class="title"></div>
+                <input type="text" id="new-post-title" placeholder="Title">
+            </div>
+            <div class="title"></div>
+                <input type="text" id="new-post-write" placeholder="Write Something">
+            </div>
+            <div class="button">
+                <a class="btn" href="">Upload Photos</a>
+                <a class="btn" href="">Submit</a>
+            </div>
+
+        </section>
+
+
+        
+
+        <footer id="page-footer">
+
+            <div id="logo-name">
+
+                <h1>Star Go</h1>
+
+            </div>
+
+            <div id="made-by">
+
+                <h2>Made By</h2>
+
+                <div id="students-names">
+                    <p>Lin</p>
+                    <p>Jerry</p>
+                    <p>Ansley</p>
+                    <p>Solar</p>
+                    <p>Thisura</p>
+                </div>
+
+            </div>
+
+            <div id="contact-us">
+
+                <h2>Contact Us</h2>
+
+                <div id="contact-information">
+
+                    <h3>Mailbox</h3>
+
+                    <p>solarpark1226@gmail.com</p>
+
+                    <h3>Phone</h3>
+
+                    <p>0412345678</p>
+
+                </div>
+
+            </div>
+
+            <nav id="social-media">
+
+                <ul>
+
+                    <li>
+                        <a href=""></a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </footer>
+        
+    </body>
 </html>
