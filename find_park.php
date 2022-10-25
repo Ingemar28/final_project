@@ -47,7 +47,7 @@
 					<a href="index.php">Home</a>
 				</li>
 				<li class="current">
-					<a href="find_park.html">Find Park</a>
+					<a href="find_park.php">Find Park</a>
 				</li>
 				<li>
 					<a href="mission.html">Mission Board</a>

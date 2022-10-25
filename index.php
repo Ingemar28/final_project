@@ -156,7 +156,7 @@
 
             </div>
 
-            <a class="btn" href="">Community&rarr;</a>
+            <a class="btn" href="community.html">Community&rarr;</a>
 
         </section>
 
@@ -256,7 +256,7 @@
 
             </div>
 
-            <a class="btn" href="">Find Park&rarr;</a>
+            <a class="btn" href="find_park.php">Find Park&rarr;</a>
 
         </section>
 
@@ -293,24 +293,6 @@
                     </select>
     
                 </form>
-<!-- 
-                <form class="star" action="">
-    
-                    <label for="star">Star: </label>
-    
-                    <select name="star" id="star">
-                      <option value="Paris">Paris, French</option>
-                      <option value="Rome">Rome, Italy</option>
-                      <option value="Tokyo">Tokyo, Japan</option>
-                      <option value="London">London, UK</option>
-                      <option value="Kobenhavn">København, Denmark</option>
-                      <option value="Agra">Agra, India</option>
-                      <option value="Lofoten">Lofoten, Norway</option>
-                      <option value="Brisbane">Brisbane, Australia</option>
-                      <option value="New York">New York, USA</option>
-                    </select>
-    
-                </form> -->
 
                 <form class="time" action="">
 
