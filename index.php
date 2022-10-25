@@ -1,4 +1,21 @@
+<?php
+    $servername = "localhost";
+    $username = "orcus";
+    $password = "deco18007180";
+    $dbname = "park";
 
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT parkName FROM park WHERE id <= 10";
+    $result = $conn->query($sql);
+
+    $conn->close();
+?>
 
 <!doctype html>
 
@@ -30,7 +47,7 @@
 					<a href="index.php">Home</a>
 				</li>
 				<li>
-					<a href="find_park.html">Find Park</a>
+					<a href="find_park.php">Find Park</a>
 				</li>
 				<li>
 					<a href="mission.html">Mission Board</a>
@@ -263,21 +280,6 @@
     
                     <select name="location" id="location">
                         <?php
-                            $servername = "localhost";
-                            $username = "orcus";
-                            $password = "deco18007180";
-                            $dbname = "park";
-
-                            // Create connection
-                            $conn = new mysqli($servername, $username, $password, $dbname);
-                            // Check connection
-                            if ($conn->connect_error) {
-                                die("Connection failed: " . $conn->connect_error);
-                            }
-
-                            $sql = "SELECT parkName FROM park WHERE id <= 10";
-                            $result = $conn->query($sql);
-
                             if ($result->num_rows > 0) {
                                 // output data of each row
                                 while($row = $result->fetch_assoc()) {
@@ -286,8 +288,6 @@
                             } else {
                                 echo "0 results";
                             }
-
-                            $conn->close();
                         ?>
 
                     </select>
