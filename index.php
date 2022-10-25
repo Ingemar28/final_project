@@ -36,7 +36,7 @@
 					<a href="mission.html">Mission Board</a>
 				</li>
                 <li>
-					<a href="">Community</a>
+					<a href="community.html">Community</a>
 				</li>
 			</ul>
 
@@ -263,31 +263,31 @@
     
                     <select name="location" id="location">
                         <?php
-                            // $servername = "localhost";
-                            // $username = "orcus";
-                            // $password = "deco18007180";
-                            // $dbname = "park";
+                            $servername = "localhost";
+                            $username = "orcus";
+                            $password = "deco18007180";
+                            $dbname = "park";
 
-                            // // Create connection
-                            // $conn = new mysqli($servername, $username, $password, $dbname);
-                            // // Check connection
-                            // if ($conn->connect_error) {
-                            //     die("Connection failed: " . $conn->connect_error);
-                            // }
+                            // Create connection
+                            $conn = new mysqli($servername, $username, $password, $dbname);
+                            // Check connection
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
 
-                            // $sql = "SELECT parkName FROM park WHERE id <= 10";
-                            // $result = $conn->query($sql);
+                            $sql = "SELECT parkName FROM park WHERE id <= 10";
+                            $result = $conn->query($sql);
 
-                            // if ($result->num_rows > 0) {
-                            //     // output data of each row
-                            //     while($row = $result->fetch_assoc()) {
-                            //         echo "<option value='". $row["parkName"]. "'>". $row["parkName"]. "</option>";
-                            //     }
-                            // } else {
-                            //     echo "0 results";
-                            // }
+                            if ($result->num_rows > 0) {
+                                // output data of each row
+                                while($row = $result->fetch_assoc()) {
+                                    echo "<option value='". $row["parkName"]. "'>". $row["parkName"]. "</option>";
+                                }
+                            } else {
+                                echo "0 results";
+                            }
 
-                            // $conn->close();
+                            $conn->close();
                         ?>
 
                     </select>
