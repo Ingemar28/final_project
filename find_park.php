@@ -11,7 +11,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT * FROM park WHERE id <= 10";
+    $sql = "SELECT * FROM park WHERE shapeArea > 2000000;";
     $result = $conn->query($sql);
 
     $conn->close();
@@ -40,8 +40,6 @@
 
         <nav id="main-menu">
 
-            <a href="login.html">Login</a>
-            
             <ul>
 				<li>
 					<a href="index.php">Home</a>

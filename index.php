@@ -11,7 +11,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT parkName FROM park WHERE id <= 10";
+    $sql = "SELECT parkName FROM park WHERE shapeArea > 2000000;";
     $result = $conn->query($sql);
 
     $conn->close();
@@ -40,8 +40,6 @@
 
         <nav id="main-menu">
 
-            <a href="login.html">Login</a>
-            
             <ul>
 				<li class="current">
 					<a href="index.php">Home</a>
@@ -268,7 +266,7 @@
 
                 <h2>Star</h2>
     
-                <p>Here are recommendations for popular stargazing parks.</p>
+                <p>Look up the moon phase and astronomy information.</p>
 
             </div>
 
