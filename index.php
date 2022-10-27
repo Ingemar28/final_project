@@ -72,7 +72,10 @@
                 </div>
 
                 <p>
-                    It's time to go for Star Go and relax
+                    It's time to go for Star Go and relax. Here you can 
+                    see the most popular photo and park information. If 
+                    you are planning to stargaze this weekend, try out our 
+                    search star function!
                 </p>
 
 			</section>

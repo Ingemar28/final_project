@@ -80,58 +80,34 @@
             <section id="popular-photos">
                 
                 <div class="title">
-                    <h2>Star</h2>
-                    <h2>Categories</h2>
+                    <h2>Hashtags</h2>
+                    <!-- <h2>Categories</h2> -->
                     
-                    <p>popular stars for photography</p>
+                    <p>Search parks by these hashtags!</p>
                     
                 </div>
                 
                 <article id="star-icons">
                     <div>
-                        <img src="images/icons8-aquarius-48.png" alt="Aquarius">
-                        <p>Aquarius</p>
+                        <img src="images/hashtag.png" alt="hashtag icon">
+                        <p>fullmoon</p>
                     </div>
                     <div>
-                        <img src="images/icons8-sagittarius-48.png" alt="sagittarius">
-                        <p>Sagittarius</p>
+                        <img src="images/hashtag.png" alt="hashtag icon">
+                        <p>milkyway</p>
                     </div>
                     <div>
-                        <img src="images/icons8-cancer-48.png" alt="cancer">
-                        <p>Cancer</p>
+                        <img src="images/hashtag.png" alt="hashtag icon">
+                        <p>shootingstar</p>
                     </div>
                     <div>
-                        <img src="images/icons8-virgo-48.png" alt="virgo">
-                        <p>Virgo</p>
+                        <img src="images/hashtag.png" alt="hashtag icon">
+                        <p>startrail</p>
                     </div>
                     <div>
-                        <img src="images/icons8-libra-48.png" alt="libra">
-                        <p>Libra</p>
+                        <img src="images/hashtag.png" alt="hashtag icon">
+                        <p>halloween</p>
                     </div>
-                    <div>
-                        <img src="images/icons8-leo-48.png" alt="leo">
-                        <p>Leo</p>
-                    </div>
-                    <div>
-                    <img src="images/icons8-taurus-48.png" alt="taurus">
-                    <p>Taurus</p>
-                </div>
-                <div>
-                    <img src="images/icons8-gemini-48.png" alt="gemini">
-                    <p>Gemini</p>
-                </div>
-                <div>
-                    <img src="images/icons8-aries-48.png" alt="aries">
-                    <p>Aries</p>
-                </div>
-                <div>
-                    <img src="images/icons8-pisces-48.png" alt="pisces">
-                    <p>Pisces</p>
-                </div>
-                <div>
-                    <img src="images/icons8-scorpio-48.png" alt="scorpio">
-                    <p>Scorpio</p>
-                </div>
             </article>
             
         </section>
