@@ -79,5 +79,5 @@ function star_ajax_js(){
 
 function preview() {
     blah.src=URL.createObjectURL(event.target.files[0]);
-    blah.id="preview-photo"
+    blah.id="preview-photo";
 }
