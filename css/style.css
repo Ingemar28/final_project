@@ -1149,15 +1149,13 @@ position: relative;
 		justify-content: space-between;
 		text-align: center;
         padding-top: 5%;
-        /* font-family: var(--description-font); */
+        font-family: var(--description-font);
 	}
 	.page-find #star-icons div{
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		width: 5%;
-		/* border: black 2px solid; */
 	}
-
 
 	.page-find #park-gallery{
 		margin-left: 5%;
