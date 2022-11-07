@@ -1087,7 +1087,6 @@ position: relative;
 	}
 
 	.page-find #page-header .banner-title p {
-		font: var(--title-italic);
 		text-align: left;
 	}
 	
